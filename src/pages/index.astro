@@ -1,0 +1,144 @@
+---
+import DocLayout from "../layouts/DocLayout.astro";
+import AegisLogo from "../components/AegisLogo.astro";
+---
+
+<DocLayout title="Home" description="The AEGIS Initiative — governance-first AI security. Capability without constraint is not intelligence.">
+  <div class="hero">
+    <AegisLogo size={96} />
+    <h1>AEGIS Initiative</h1>
+    <p class="tagline">Capability without constraint is not intelligence&trade;</p>
+  </div>
+
+  <hr />
+
+  <section class="mission">
+    <h2>Mission</h2>
+    <p>
+      The AEGIS Initiative exists to establish governance-first security as the
+      foundational standard for autonomous AI systems. We develop enforceable
+      governance frameworks, publish open specifications, and engage with
+      policymakers and standards bodies to ensure that AI capability is always
+      bounded by constitutional constraint.
+    </p>
+    <p>
+      AEGIS is not anti-AI. AEGIS is pro-governance. We believe the path to
+      trustworthy AI runs through deterministic enforcement, transparent audit
+      trails, and human oversight that cannot be bypassed by the systems it
+      governs.
+    </p>
+  </section>
+
+  <section>
+    <h2>Current Focus</h2>
+    <ul>
+      <li>Publishing the <a href="https://aegis-constitution.com">AEGIS Constitution</a> — a versioned, citeable governance charter for AI systems</li>
+      <li>Engaging with NIST on AI safety standards and submitting formal public comments</li>
+      <li>Developing policy positions on emerging AI governance frameworks</li>
+      <li>Building open-source reference implementations of constitutional enforcement</li>
+    </ul>
+  </section>
+
+  <section class="nav-cards">
+    <h2>Explore</h2>
+    <div class="card-grid">
+      <a href="/about/" class="card">
+        <h3>About</h3>
+        <p>What AEGIS is, how we work, and the three-layer architecture behind it.</p>
+      </a>
+      <a href="/constitution/" class="card">
+        <h3>Constitution</h3>
+        <p>The canonical governance charter — versioned, citeable, openly licensed.</p>
+      </a>
+      <a href="/policy/" class="card">
+        <h3>Policy &amp; Research</h3>
+        <p>Published papers, NIST submissions, and policy engagement.</p>
+      </a>
+      <a href="/press/" class="card">
+        <h3>Press</h3>
+        <p>Press releases, published articles, and media resources.</p>
+      </a>
+      <a href="/contact/" class="card">
+        <h3>Contact</h3>
+        <p>Reach out for press inquiries, policy engagement, or general questions.</p>
+      </a>
+    </div>
+  </section>
+</DocLayout>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0 1rem;
+  }
+
+  .hero h1 {
+    margin-top: 1rem;
+    font-size: 2.75rem;
+    font-weight: 400;
+  }
+
+  .tagline {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+  }
+
+  .mission {
+    margin-bottom: 1rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 960px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-bg-subtle);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 0.375rem;
+    margin-top: 0;
+  }
+
+  .card p {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+  }
+</style>
