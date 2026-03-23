@@ -1,2 +1,27 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# pagefind
+public/pagefind/
+
+# environment
+.env
+.env.*
+
+# editor
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
 # Claude Code personal settings (never commit)
 .claude/settings.local.json
