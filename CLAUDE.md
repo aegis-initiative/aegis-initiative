@@ -8,7 +8,7 @@ Org home and public-facing entry point for the AEGIS Initiative. This is the fir
 - IP Owner: Finnoybu IP LLC
 - Parent Ecosystem: Finnoybu Holdings LLC
 - Website: aegis-initiative.com
-- Governance Domain: aegissystems.app
+- Governance Domain: aegis-platform.net
 
 ## This Repo's Role
 This repository serves as the **public face** of the AEGIS Initiative. It contains:
