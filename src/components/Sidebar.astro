@@ -79,9 +79,9 @@ function isGroupActive(group: any): boolean {
     border-right: 1px solid var(--color-border-subtle);
     overflow-y: auto;
     position: fixed;
-    top: 4rem;
+    top: calc(4rem + var(--aegis-nav-height, 0px));
     left: 0;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 4rem - var(--aegis-nav-height, 0px));
     display: flex;
     flex-direction: column;
     z-index: 40;
@@ -189,9 +189,9 @@ function isGroupActive(group: any): boolean {
   .sidebar.open {
     display: flex;
     position: fixed;
-    top: 4rem;
+    top: calc(4rem + var(--aegis-nav-height, 0px));
     left: 0;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 4rem - var(--aegis-nav-height, 0px));
     z-index: 60;
     width: min(280px, 85vw);
   }

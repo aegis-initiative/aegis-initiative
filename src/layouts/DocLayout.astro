@@ -36,6 +36,9 @@ const {
     <meta name="twitter:description" content={description} />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- AEGIS Ecosystem Navigation Bar -->
+    <script src="/shared/aegis-nav.js" defer></script>
     <link
       rel="canonical"
       href={new URL(Astro.url.pathname, Astro.site).toString()}
@@ -260,11 +263,11 @@ const {
     line-height: 1.3;
     letter-spacing: 0.01em;
     color: var(--color-text);
-    scroll-margin-top: 5rem;
+    scroll-margin-top: calc(5rem + var(--aegis-nav-height, 0px));
   }
 
   [id] {
-    scroll-margin-top: 6.55rem;
+    scroll-margin-top: calc(6.55rem + var(--aegis-nav-height, 0px));
   }
 
   h1 { font-size: 2.5rem; margin-bottom: 1rem; }
