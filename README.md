@@ -73,14 +73,14 @@ Artificial intelligence has not yet undergone this transition. AEGIS is the arch
 
 | Repository | Purpose | Domain |
 |---|---|---|
-| [aegis](https://github.com/aegis-initiative/aegis) | Governance doctrine, ADRs, cross-component specs | aegissystems.app |
+| [aegis](https://github.com/aegis-initiative/aegis) | Governance doctrine, ADRs, cross-component specs | aegis-initiative.com |
 | [aegis-constitution](https://github.com/aegis-initiative/aegis-constitution) | Canonical governance charter — public, versioned, citeable | aegissystems.app |
-| [aegis-core](https://github.com/aegis-initiative/aegis-core) | Enforcement engine — risk scoring, mediation, policy runtime | aegissystems.app |
-| [aegis-platform](https://github.com/aegis-initiative/aegis-platform) | Production platform — operator dashboard, API surface | aegissystems.live |
-| [aegis-docs](https://github.com/aegis-initiative/aegis-docs) | Public documentation site | aegissystems.app |
+| [aegis-core](https://github.com/aegis-initiative/aegis-core) | Enforcement engine — risk scoring, mediation, policy runtime | aegis-platform.net |
+| [aegis-platform](https://github.com/aegis-initiative/aegis-platform) | Production platform — operator dashboard, API surface | aegis-platform.net |
+| [aegis-docs](https://github.com/aegis-initiative/aegis-docs) | Public documentation site | aegis-docs.com |
 | [aegis-labs](https://github.com/aegis-initiative/aegis-labs) | Research sandbox and experimental work | aegis-labs.dev |
 | [aegis-ops](https://github.com/aegis-initiative/aegis-ops) | CI/CD, infrastructure, deployment, runbooks | — |
-| [aegis-sdk](https://github.com/aegis-initiative/aegis-sdk) | Client SDK for npm and PyPI | aegissystems.app |
+| [aegis-sdk](https://github.com/aegis-initiative/aegis-sdk) | Client SDK for npm and PyPI | aegis-docs.com |
 
 ---
 
