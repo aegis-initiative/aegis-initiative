@@ -57,6 +57,27 @@ const {
         document.documentElement.dataset.theme = stored || preferred;
       })();
     </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AEGIS Initiative",
+      "url": "https://aegis-initiative.com",
+      "description": "The AEGIS Initiative exists to establish governance-first security as the foundational standard for autonomous AI systems.",
+      "founder": {
+        "@type": "Person",
+        "name": "Kenneth Tannenbaum"
+      },
+      "foundingDate": "2026-01-26",
+      "sameAs": [
+        "https://github.com/aegis-initiative",
+        "https://aegis-constitution.com",
+        "https://aegis-docs.com"
+      ]
+    }
+    </script>
   </head>
   <body>
     <Header />
