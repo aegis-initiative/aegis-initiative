@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "AEGIS Initiative",
+  "description": "Machine-readable content for the AEGIS Initiative organization site",
+  "url": "https://aegis-initiative.com",
+  "version": "1.0.0",
+  "updated": "2026-03-25",
+  "license": "Apache-2.0",
+  "contact": {
+    "email": "info@aegis-initiative.com",
+    "web": "https://aegis-initiative.com/contact"
+  },
+  "organization": {
+    "name": "AEGIS Initiative",
+    "legal_entity": "Finnoybu IP LLC",
+    "parent": "Finnoybu Holdings LLC"
+  },
+  "resources": [
+    {
+      "name": "site-content",
+      "description": "Structured version of all page content",
+      "path": "site-content.json",
+      "format": "application/json"
+    },
+    {
+      "name": "navigation",
+      "description": "Site structure and navigation map",
+      "path": "navigation.json",
+      "format": "application/json"
+    },
+    {
+      "name": "metadata",
+      "description": "Organization metadata, licensing, and citation information",
+      "path": "metadata.json",
+      "format": "application/json"
+    }
+  ],
+  "related_sites": {
+    "documentation": "https://aegis-docs.com",
+    "constitution": "https://aegis-constitution.com",
+    "governance_data": "https://aegis-governance.com",
+    "federation": "https://aegis-federation.com",
+    "platform": "https://aegis-platform.net",
+    "repository": "https://github.com/aegis-initiative"
+  }
+}
