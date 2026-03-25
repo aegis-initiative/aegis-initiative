@@ -1,0 +1,66 @@
+{
+  "organization": {
+    "name": "AEGIS Initiative",
+    "legal_entity": "Finnoybu IP LLC",
+    "parent": "Finnoybu Holdings LLC",
+    "founder": "Kenneth Tannenbaum",
+    "founded": "2026-01-26",
+    "first_commit": "2026-02-04",
+    "domain": "aegis-platform.net",
+    "contact": {
+      "general": "info@aegis-initiative.com",
+      "licensing": "licensing@aegis-initiative.com",
+      "security": "security@aegis-initiative.com"
+    }
+  },
+  "project": {
+    "name": "AEGIS",
+    "full_name": "Architectural Enforcement and Governance of Intelligent Systems",
+    "tagline": "Capability without constraint is not intelligence.",
+    "description": "An open constitutional governance architecture that enforces deterministic policy at the AI agent action boundary — post-reasoning, pre-execution — making unauthorized actions structurally unavailable.",
+    "license": {
+      "specifications": "Apache-2.0",
+      "core_and_sdk": "BSL-1.1 (converts to Apache-2.0 after 4 years)",
+      "platform_and_ops": "Proprietary"
+    }
+  },
+  "repositories": {
+    "organization": "https://github.com/aegis-initiative",
+    "repos": [
+      { "name": "aegis", "role": "Central authority — governance doctrine, ADRs, schemas, roadmap", "url": "https://github.com/aegis-initiative/aegis" },
+      { "name": "aegis-constitution", "role": "Public governance charter, versioned and citeable", "url": "https://github.com/aegis-initiative/aegis-constitution" },
+      { "name": "aegis-governance", "role": "Technical governance specs: AGP protocol, threat model, federation, ATX-1", "url": "https://github.com/aegis-initiative/aegis-governance" },
+      { "name": "aegis-core", "role": "Enforcement engine implementing the governance runtime", "url": "https://github.com/aegis-initiative/aegis-core" },
+      { "name": "aegis-platform", "role": "Operator dashboard and API surface", "url": "https://github.com/aegis-initiative/aegis-platform" },
+      { "name": "aegis-docs", "role": "Public documentation site", "url": "https://github.com/aegis-initiative/aegis-docs" },
+      { "name": "aegis-ops", "role": "CI/CD workflows, infrastructure-as-code, deployment configs", "url": "https://github.com/aegis-initiative/aegis-ops" },
+      { "name": "aegis-sdk", "role": "Client SDK for TypeScript/JavaScript and Python", "url": "https://github.com/aegis-initiative/aegis-sdk" },
+      { "name": "aegis-federation", "role": "AT Protocol federation with Lexicon schemas", "url": "https://github.com/aegis-initiative/aegis-federation" },
+      { "name": "aegis-labs", "role": "Research sandbox", "url": "https://github.com/aegis-initiative/aegis-labs" },
+      { "name": "aegis-initiative", "role": "Organization home and public roadmap", "url": "https://github.com/aegis-initiative/aegis-initiative" }
+    ]
+  },
+  "publications": {
+    "ieee_computer": {
+      "title": "AEGIS: A Constitutional Governance Architecture for Autonomous AI Agents",
+      "venue": "IEEE Computer — Special Issue on AI Governance and Compliance",
+      "status": "Submitted",
+      "year": 2026,
+      "author": "Kenneth Tannenbaum",
+      "orcid": "0009-0007-4215-1789"
+    }
+  },
+  "key_specifications": {
+    "AGP-1": "AEGIS Governance Protocol — wire protocol for action governance",
+    "GFN-1": "Governance Federation Network — decentralized governance intelligence sharing",
+    "ATX-1": "AEGIS Threat Matrix — 9 tactics, 20 techniques for agentic AI threat modeling",
+    "ATM-1": "AEGIS Adaptive Threat Model — STRIDE-based threat analysis of AEGIS deployments",
+    "RFC-0004": "Trust architecture — two-layer model (threat detection + reputation)"
+  },
+  "federation": {
+    "protocol": "AT Protocol (ATProto)",
+    "identity": "Decentralized Identifiers (DIDs)",
+    "did_format": "did:aegis:<network>:<node-id>",
+    "trust_model": "Two-layer: federation publisher trust (GFN-1) + agent runtime trust (RFC-0004)"
+  }
+}

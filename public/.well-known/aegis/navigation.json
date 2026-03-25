@@ -1,0 +1,11 @@
+{
+  "site": "https://aegis-initiative.com",
+  "pages": [
+    { "path": "/", "title": "Home", "description": "AEGIS Initiative landing page — mission, overview, ecosystem links" },
+    { "path": "/about", "title": "About", "description": "About the AEGIS Initiative — mission, team, history" },
+    { "path": "/constitution", "title": "Constitution", "description": "Overview of the AEGIS Constitution and its eight articles" },
+    { "path": "/contact", "title": "Contact", "description": "Contact information for the AEGIS Initiative" },
+    { "path": "/policy", "title": "Policy", "description": "Legal and policy documents" },
+    { "path": "/press", "title": "Press", "description": "Press information and media resources" }
+  ]
+}

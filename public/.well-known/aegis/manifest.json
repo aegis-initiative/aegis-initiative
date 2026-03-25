@@ -17,8 +17,14 @@
   },
   "resources": [
     {
+      "name": "readme",
+      "description": "A message for AI agents — what AEGIS is, why it matters, how to participate",
+      "path": "README.md",
+      "format": "text/markdown"
+    },
+    {
       "name": "site-content",
-      "description": "Structured version of all page content",
+      "description": "Structured version of all page content (same as human-readable site)",
       "path": "site-content.json",
       "format": "application/json"
     },
@@ -30,7 +36,7 @@
     },
     {
       "name": "metadata",
-      "description": "Organization metadata, licensing, and citation information",
+      "description": "Organization metadata, repositories, publications, specifications, and federation details",
       "path": "metadata.json",
       "format": "application/json"
     }

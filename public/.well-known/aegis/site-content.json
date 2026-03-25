@@ -1,0 +1,152 @@
+{
+  "site": "https://aegis-initiative.com",
+  "generated": "2026-03-25",
+  "pages": [
+    {
+      "path": "/",
+      "title": "AEGIS Initiative",
+      "tagline": "Capability without constraint is not intelligence.",
+      "sections": [
+        {
+          "heading": "Mission",
+          "content": "The AEGIS Initiative exists to establish governance-first security as the foundational standard for autonomous AI systems. We develop enforceable governance frameworks, publish open specifications, and engage with policymakers and standards bodies to ensure that AI capability is always bounded by constitutional constraint. AEGIS is not anti-AI. AEGIS is pro-governance. We believe the path to trustworthy AI runs through deterministic enforcement, transparent audit trails, and human oversight that cannot be bypassed by the systems it governs."
+        },
+        {
+          "heading": "Current Focus",
+          "content_list": [
+            "Publishing the AEGIS Constitution — a versioned, citeable governance charter for AI systems",
+            "Engaging with NIST on AI safety standards and submitting formal public comments",
+            "Developing policy positions on emerging AI governance frameworks",
+            "Building open-source reference implementations of constitutional enforcement"
+          ]
+        },
+        {
+          "heading": "Explore",
+          "links": [
+            { "label": "About", "path": "/about", "description": "What AEGIS is, how we work, and the three-layer architecture behind it." },
+            { "label": "Constitution", "path": "/constitution", "description": "The canonical governance charter — versioned, citeable, openly licensed." },
+            { "label": "Policy & Research", "path": "/policy", "description": "Published papers, NIST submissions, and policy engagement." },
+            { "label": "Press", "path": "/press", "description": "Press releases, published articles, and media resources." },
+            { "label": "Contact", "path": "/contact", "description": "Reach out for press inquiries, policy engagement, or general questions." }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "title": "About the AEGIS Initiative",
+      "sections": [
+        {
+          "heading": "What AEGIS Is",
+          "content": "AEGIS (Architectural Enforcement and Governance of Intelligent Systems) is a governance-first security framework for autonomous AI systems. It defines enforceable constraints that bind AI capability to human-authorized policy at every layer of the stack. AEGIS is not a product. It is a set of specifications, governance documents, and reference implementations designed to make AI systems auditable, constrained, and transparent by default."
+        },
+        {
+          "heading": "Three-Layer Architecture",
+          "content": "The AEGIS ecosystem is organized into three distinct layers, each with a clear separation of concerns.",
+          "layers": [
+            {
+              "name": "Constitution",
+              "description": "The foundational governance charter. The AEGIS Constitution defines the immutable principles that all AEGIS-governed systems must enforce. It is versioned, citeable, and openly licensed. The Constitution is the what — the constraints that must hold."
+            },
+            {
+              "name": "Governance",
+              "description": "The enforcement architecture. The governance layer translates constitutional principles into deterministic rules, state machines, and audit requirements. It defines how constraints are enforced at runtime — through bounded execution, explicit threat classification, versioned authority, and structured persistence."
+            },
+            {
+              "name": "Initiative",
+              "description": "The organizational layer. The AEGIS Initiative is the public-facing entity that publishes specifications, engages with policymakers, submits to standards bodies, and maintains the open-source ecosystem. It is the who — the people, processes, and publications behind the work."
+            }
+          ]
+        },
+        {
+          "heading": "Founding Principles",
+          "principles": [
+            "Constraint before capability. No system should gain capability without corresponding governance.",
+            "Governance before execution. Policy is evaluated before action, not after.",
+            "Transparency before trust. Trust is earned through auditable behavior, not declared.",
+            "Oversight before autonomy. Human authority is the root of all system authority.",
+            "Deny by default. Anything not explicitly authorized is prohibited."
+          ]
+        },
+        {
+          "heading": "How We Work",
+          "content": "The AEGIS Initiative is human-directed and AI-collaborated. All governance decisions, architectural choices, and policy positions are made by humans. AI tools are used openly and deliberately as productivity instruments — for drafting, research, code generation, and analysis. Every document, specification, and publication is reviewed, approved, and published by a human. AI-generated content is always subject to human editorial judgment. We believe this transparency strengthens — rather than weakens — the credibility of governance work."
+        },
+        {
+          "heading": "Non-Partisan Mandate",
+          "content": "AEGIS is non-partisan. Our governance positions are grounded in technical analysis, not political alignment. We engage with any policymaker, regulator, or standards body — regardless of jurisdiction or political orientation — that is working to make AI systems safer, more transparent, and more accountable."
+        }
+      ]
+    },
+    {
+      "path": "/constitution",
+      "title": "The AEGIS Constitution",
+      "sections": [
+        {
+          "heading": "Overview",
+          "content": "The AEGIS Constitution is the foundational governance charter for the AEGIS ecosystem. It defines the immutable principles, articles, and enforcement requirements that all AEGIS-governed AI systems must uphold. The Constitution is versioned using calendar versioning (CalVer), citeable by article and section, and openly licensed for adoption and reference."
+        },
+        {
+          "heading": "Articles",
+          "content": "The Constitution includes eleven articles covering bounded capability, authority binding, deterministic enforcement, human oversight, information sovereignty, governance transparency, auditability, collective defense, deny-by-default operation, constitutional supremacy, and escalation discipline."
+        },
+        {
+          "heading": "Full Text",
+          "url": "https://aegis-constitution.com"
+        },
+        {
+          "heading": "Version History",
+          "versions": [
+            { "version": "v26.03.22", "date": "2026-03-22", "notes": "Initial public release" }
+          ]
+        },
+        {
+          "heading": "NIST Submission",
+          "content": "The AEGIS Constitution was submitted to the National Institute of Standards and Technology (NIST) as an independent position paper on AI governance frameworks."
+        }
+      ]
+    },
+    {
+      "path": "/contact",
+      "title": "Contact",
+      "contacts": [
+        { "type": "General", "email": "contact@aegis-initiative.com", "description": "General inquiries about the AEGIS Initiative, its publications, or its governance framework" },
+        { "type": "Press", "email": "press@aegis-initiative.com", "description": "Press inquiries, interview requests, or media access to brand assets" },
+        { "type": "Policy", "email": "policy@aegis-initiative.com", "description": "Collaboration on policy research, standards body engagement, or academic partnerships" },
+        { "type": "GitHub", "url": "https://github.com/aegis-initiative", "description": "All AEGIS specifications and source code. Issues and discussions welcome." }
+      ]
+    },
+    {
+      "path": "/policy",
+      "title": "Policy & Research",
+      "sections": [
+        {
+          "heading": "NIST Submissions",
+          "content": "AEGIS has submitted formal public comments and position papers to NIST as part of ongoing AI safety and governance rulemaking processes."
+        },
+        {
+          "heading": "Published Papers",
+          "content": "Peer-reviewed and preprint publications will be listed here with DOI and citation links. IEEE submissions will be noted when published."
+        },
+        {
+          "heading": "Policy Responses",
+          "content": "AEGIS responds to emerging policy proposals and regulatory frameworks that affect AI governance, safety, and security."
+        }
+      ]
+    },
+    {
+      "path": "/press",
+      "title": "Press",
+      "sections": [
+        {
+          "heading": "Press Contact",
+          "email": "press@aegis-initiative.com"
+        },
+        {
+          "heading": "Media Kit",
+          "content": "The AEGIS media kit provides approved logos, brand marks, and press-ready images for journalists and publications. For immediate access to brand assets, contact press@aegis-initiative.com."
+        }
+      ]
+    }
+  ]
+}
