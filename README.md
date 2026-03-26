@@ -1,4 +1,11 @@
 <p align="center">
+  <img src="https://img.shields.io/badge/ip--owner-Finnoybu%20IP%20LLC-blueviolet?style=flat-square" alt="IP Owner">
+  <a href="https://github.com/aegis-initiative"><img src="https://img.shields.io/badge/org-aegis--initiative-0084e7?style=flat-square&logo=github" alt="Org"></a>
+  <a href="https://aegis-initiative.com"><img src="https://img.shields.io/badge/domain-aegis--initiative.com-0084e7?style=flat-square" alt="Domain"></a>
+  <img src="https://img.shields.io/badge/visibility-public-lightgrey?style=flat-square" alt="Public">
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/AEGIS_wordmark_dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/AEGIS_wordmark_light.svg">
@@ -12,13 +19,6 @@
 
 <p align="center">
   <em>Capability without constraint is not intelligence™</em>
-</p>
-
-<p align="center">
-  <a href="https://github.com/aegis-initiative"><img src="https://img.shields.io/badge/org-aegis--initiative-0084e7?style=flat-square&logo=github" alt="GitHub Org"></a>
-  <a href="https://aegis-initiative.com"><img src="https://img.shields.io/badge/home-aegis--initiative.com-0084e7?style=flat-square" alt="Website"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-green?style=flat-square" alt="License"></a>
-  <a href="https://github.com/aegis-initiative/aegis-constitution"><img src="https://img.shields.io/badge/constitution-v0.1-gold?style=flat-square" alt="Constitution"></a>
 </p>
 
 ---
