@@ -53,7 +53,8 @@
   "key_specifications": {
     "AGP-1": "AEGIS Governance Protocol — wire protocol for action governance",
     "GFN-1": "Governance Federation Network — decentralized governance intelligence sharing",
-    "ATX-1": "AEGIS Threat Matrix — 9 tactics, 20 techniques for agentic AI threat modeling",
+    "ATX-1": "AEGIS Threat Matrix v2.0 — 9 tactics, 25 techniques for agentic AI threat modeling",
+    "ACF-1": "AEGIS Control Framework — detection, validation, and response for all 25 ATX-1 techniques",
     "ATM-1": "AEGIS Adaptive Threat Model — STRIDE-based threat analysis of AEGIS deployments",
     "RFC-0004": "Trust architecture — two-layer model (threat detection + reputation)"
   },
