@@ -37,7 +37,7 @@ AEGIS introduces a **governance runtime layer** between AI reasoning and system 
 AI Agent
    │
    ▼
-AEGIS™ Governance Gateway
+AEGIS Governance Gateway
    │
    ▼
 Decision Engine
