@@ -119,7 +119,8 @@ Used by the `<Aside>` component for contextual callouts.
 | Headings | IBM Plex Sans | `system-ui, sans-serif` | Variable font (wdth + wght axes, 100-700) |
 | Body | Poppins | `system-ui, sans-serif` | Static weights (300, 400, 500, 600) |
 
-Both families are self-hosted as WOFF2 files. The branding kit also includes Barlow Condensed, Inter, Open Sans, and Univers as supplementary brand fonts.
+Both families are self-hosted as WOFF2 files. The branding kit also includes Barlow Condensed, Inter, Open Sans, and
+Univers as supplementary brand fonts.
 
 ### Font Weights
 

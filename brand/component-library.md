@@ -7,7 +7,9 @@
 
 ## Aside
 
-Contextual callout box with a colored left border, background tint, and AEGIS shield icon. Used to highlight governance-specific content types.
+Contextual callout box with a colored left border, background tint,
+and AEGIS shield icon. Used to highlight governance-specific content
+types.
 
 ### Props
 
@@ -48,7 +50,10 @@ import Aside from '../components/Aside.astro';
 
 ## Breadcrumb
 
-Horizontal breadcrumb navigation bar. Displays "AEGIS Constitution" as the home root (hidden on mobile) followed by a configurable trail of links. The current page (last item) renders as plain text with `aria-current="page"`.
+Horizontal breadcrumb navigation bar. Displays "AEGIS Constitution"
+as the home root (hidden on mobile) followed by a configurable trail
+of links. The current page (last item) renders as plain text with
+`aria-current="page"`.
 
 ### Props
 
@@ -91,7 +96,8 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
 ## PrevNext
 
-Sequential navigation links displayed at the bottom of content pages. Renders as two cards (Previous / Next) with directional chevron icons.
+Sequential navigation links displayed at the bottom of content pages.
+Renders as two cards (Previous / Next) with directional chevron icons.
 
 ### Props
 
@@ -136,7 +142,9 @@ import PrevNext from '../components/PrevNext.astro';
 
 ## Search
 
-Full-text search powered by Pagefind. Includes a trigger button (desktop only), a full-screen modal dialog, Pagefind UI integration, and a recent searches panel with local storage persistence.
+Full-text search powered by Pagefind. Includes a trigger button (desktop
+only), a full-screen modal dialog, Pagefind UI integration, and a recent
+searches panel with local storage persistence.
 
 ### Props
 
@@ -157,10 +165,13 @@ import Search from '../components/Search.astro';
 
 ### Behavior
 
-- **Trigger button:** Visible at 1024px+ in the header bar. Shows search icon, "Search" label, and `Ctrl+K` / `Cmd+K` shortcut badge
+- **Trigger button:** Visible at 1024px+ in the header bar. Shows search
+  icon, "Search" label, and `Ctrl+K` / `Cmd+K` shortcut badge
 - **Keyboard shortcut:** `Ctrl+K` / `Cmd+K` toggles the modal. Platform auto-detected
 - **Modal:** Full-screen on mobile, centered 40rem dialog on desktop (50rem+)
-- **Recent searches:** Stored in `localStorage` under `aegis-recent-searches`. Max 5 entries. Shown when input is empty. Individual entries can be removed
+- **Recent searches:** Stored in `localStorage` under
+  `aegis-recent-searches`. Max 5 entries. Shown when input is empty.
+  Individual entries can be removed
 - **Results:** Pagefind UI with tree-diagram sub-results (vertical + horizontal branch lines)
 - **Mobile integration:** Pairs with a `#search-open` button in Header.astro for mobile trigger
 
@@ -177,7 +188,9 @@ import Search from '../components/Search.astro';
 
 ## TableOfContents
 
-Dual-mode table of contents: a fixed right rail on wide screens (1367px+) and a dropdown panel on mid-width screens (1024-1366px). Headings are extracted client-side from `.main-content h2` elements.
+Dual-mode table of contents: a fixed right rail on wide screens
+(1367px+) and a dropdown panel on mid-width screens (1024-1366px).
+Headings are extracted client-side from `.main-content h2` elements.
 
 ### Props
 
@@ -196,8 +209,11 @@ import TableOfContents from '../components/TableOfContents.astro';
 
 ### Behavior
 
-- **Rail mode** (1367px+): Fixed right sidebar, 320px wide. Vertical border-left with active indicator
-- **Dropdown mode** (1024-1366px): A button labeled "On this page" is injected into the header tools area. Clicking it toggles a dropdown overlay
+- **Rail mode** (1367px+): Fixed right sidebar, 320px wide. Vertical
+  border-left with active indicator
+- **Dropdown mode** (1024-1366px): A button labeled "On this page" is
+  injected into the header tools area. Clicking it toggles a dropdown
+  overlay
 - **Hidden** below 1024px (no ToC on mobile)
 - **Scroll spy:** IntersectionObserver highlights the current heading. Root margin: `-10% 0px -80% 0px`
 - **Auto-ID:** If a heading lacks an `id`, one is generated from its text content
@@ -212,7 +228,9 @@ import TableOfContents from '../components/TableOfContents.astro';
 
 ## AegisLogo
 
-Inline SVG rendering of the AEGIS shield+diamond logo mark. Colors are driven by CSS custom properties, so the logo automatically adapts to light/dark themes.
+Inline SVG rendering of the AEGIS shield+diamond logo mark. Colors are
+driven by CSS custom properties, so the logo automatically adapts to
+light/dark themes.
 
 ### Props
 
@@ -244,7 +262,9 @@ import AegisLogo from '../components/AegisLogo.astro';
 
 ## AegisWordmark
 
-Inline SVG rendering of the full AEGIS wordmark (logo + "AEGIS" text). Like AegisLogo, colors are driven by CSS custom properties for automatic theme adaptation.
+Inline SVG rendering of the full AEGIS wordmark (logo + "AEGIS" text).
+Like AegisLogo, colors are driven by CSS custom properties for automatic
+theme adaptation.
 
 ### Props
 
