@@ -17,23 +17,23 @@ For detailed, internal architecture and specification roadmaps, see the [aegis g
 ### Public Engagement
 - [x] NIST AI Risk Management Framework submission (March 2026)
 - [x] Org-level GitHub presence established
-- [ ] Public documentation site launch (aegis-docs)
-- [ ] AEGIS Initiative website (aegis-initiative.com)
+- [x] Public documentation site launch (aegis-docs.com)
+- [x] AEGIS Initiative website (aegis-initiative.com)
 
 ### Core Platform
-- [ ] Governance runtime engine (aegis-core) — initial implementation
-- [ ] Platform API surface (aegis-platform) — design and scaffolding
-- [ ] Client SDK (aegis-sdk) — TypeScript and Python packages
+- [x] Governance runtime engine (aegis-core) — v0.1.2 stable, 403 tests
+- [x] Platform API surface (aegis-platform) — operator dashboard and demo API live
+- [x] Client SDK (aegis-sdk) — TypeScript and Python packages published
 
 ---
 
-## Next Phase: Build (Q2 2026)
+## Next Phase: Harden & Extend (Q2 2026)
 
-- Governance Gateway MVP — runtime enforcement of constitutional articles
-- Tool Proxy Layer — mediated access to external systems
-- Operator dashboard — visibility into governance decisions and audit trail
-- Public documentation site live at aegis-docs
-- IEEE publication (pending)
+- Rust production runtime for aegis-core (v0.2.0)
+- Federation protocol implementation (RFC-0016)
+- Multi-agent governance patterns
+- IEEE peer review outcomes
+- aegis-core PyPI publication
 
 ---
 

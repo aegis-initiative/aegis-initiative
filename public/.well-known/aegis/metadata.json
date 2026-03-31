@@ -19,7 +19,7 @@
     "tagline": "Capability without constraint is not intelligence.",
     "description": "An open constitutional governance architecture that enforces deterministic policy at the AI agent action boundary — post-reasoning, pre-execution — making unauthorized actions structurally unavailable.",
     "license": {
-      "specifications": "Apache-2.0",
+      "specifications": "CC-BY-SA-4.0",
       "core_and_sdk": "BSL-1.1 (converts to Apache-2.0 after 4 years)",
       "platform_and_ops": "Proprietary"
     }
@@ -46,6 +46,32 @@
       "venue": "IEEE Computer — Special Issue on AI Governance and Compliance",
       "status": "Submitted",
       "year": 2026,
+      "doi": "10.5281/zenodo.19223924",
+      "author": "Kenneth Tannenbaum",
+      "orcid": "0009-0007-4215-1789"
+    },
+    "ieee_data_descriptions": {
+      "title": "ATX-1: AEGIS Threat Matrix for AI Governance Systems",
+      "venue": "IEEE Data Descriptions",
+      "status": "Submitted",
+      "year": 2026,
+      "doi": "10.5281/zenodo.19251098",
+      "author": "Kenneth Tannenbaum",
+      "orcid": "0009-0007-4215-1789"
+    },
+    "nist_ai_rmf": {
+      "title": "AEGIS: A Constitutional Governance Architecture — NIST AI RMF Position Statement",
+      "venue": "NIST AI Risk Management Framework",
+      "status": "Submitted",
+      "year": 2026,
+      "author": "Kenneth Tannenbaum",
+      "orcid": "0009-0007-4215-1789"
+    },
+    "nccoe": {
+      "title": "AEGIS: AI Agent Identity, Authorization, and Governance",
+      "venue": "NCCoE AI Agent Identity & Access Management",
+      "status": "Submitted",
+      "year": 2026,
       "author": "Kenneth Tannenbaum",
       "orcid": "0009-0007-4215-1789"
     }
@@ -53,8 +79,8 @@
   "key_specifications": {
     "AGP-1": "AEGIS Governance Protocol — wire protocol for action governance",
     "GFN-1": "Governance Federation Network — decentralized governance intelligence sharing",
-    "ATX-1": "AEGIS Threat Matrix v2.0 — 9 tactics, 25 techniques for agentic AI threat modeling",
-    "ACF-1": "AEGIS Control Framework — detection, validation, and response for all 25 ATX-1 techniques",
+    "ATX-1": "AEGIS Threat Matrix v2.1 — 10 tactics, 29 techniques for agentic AI threat modeling",
+    "ACF-1": "AEGIS Control Framework — detection, validation, and response for all 29 ATX-1 techniques",
     "ATM-1": "AEGIS Adaptive Threat Model — STRIDE-based threat analysis of AEGIS deployments",
     "RFC-0004": "Trust architecture — two-layer model (threat detection + reputation)"
   },
