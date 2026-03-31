@@ -1,7 +1,9 @@
 <p align="center">
   <img src="https://img.shields.io/badge/ip--owner-Finnoybu%20IP%20LLC-blueviolet?style=flat-square" alt="IP Owner">
-  <a href="https://github.com/aegis-initiative"><img src="https://img.shields.io/badge/org-aegis--initiative-0084e7?style=flat-square&logo=github" alt="Org"></a>
-  <a href="https://aegis-initiative.com"><img src="https://img.shields.io/badge/domain-aegis--initiative.com-0084e7?style=flat-square" alt="Domain"></a>
+  <a href="https://github.com/aegis-initiative"><img
+  src="https://img.shields.io/badge/org-aegis--initiative-0084e7?style=flat-square&logo=github" alt="Org"></a>
+  <a href="https://aegis-initiative.com"><img
+  src="https://img.shields.io/badge/domain-aegis--initiative.com-0084e7?style=flat-square" alt="Domain"></a>
   <img src="https://img.shields.io/badge/visibility-public-lightgrey?style=flat-square" alt="Public">
 </p>
 
@@ -25,11 +27,17 @@
 
 ## What is AEGIS™?
 
-AEGIS™ is a governance architecture that enforces **deterministic constitutional governance over AI-generated actions** before they interact with operational infrastructure.
+AEGIS™ is a governance architecture that enforces **deterministic
+constitutional governance over AI-generated actions** before they
+interact with operational infrastructure.
 
 Modern AI safety primarily addresses model behavior — what AI *says*. AEGIS addresses what AI *does*.
 
-As AI systems gain the ability to write and execute code, interact with APIs, control infrastructure, and operate as autonomous agents, alignment training alone is no longer sufficient. A model that behaves well most of the time can still cause catastrophic outcomes if granted unrestricted operational capabilities.
+As AI systems gain the ability to write and execute code, interact
+with APIs, control infrastructure, and operate as autonomous agents,
+alignment training alone is no longer sufficient. A model that behaves
+well most of the time can still cause catastrophic outcomes if granted
+unrestricted operational capabilities.
 
 AEGIS introduces a **governance runtime layer** between AI reasoning and system execution:
 
@@ -61,9 +69,12 @@ External Systems
 
 Current AI safety approaches govern what AI *says*, not what AI *does*.
 
-When AI systems begin interacting with real infrastructure — databases, networks, financial systems, security tools — alignment alone is insufficient. AEGIS addresses this gap by making governance a **runtime property of the system**, not merely a training-time guideline.
+When AI systems begin interacting with real infrastructure — databases, networks, financial systems, security tools —
+alignment alone is insufficient. AEGIS addresses this gap by making governance a **runtime property of the system**, not
+merely a training-time guideline.
 
-This mirrors the transformation that occurred in computing security: from trusted programs operating freely to enforced process isolation, sandboxing, and role-based access control.
+This mirrors the transformation that occurred in computing security: from trusted programs operating freely to enforced
+process isolation, sandboxing, and role-based access control.
 
 Artificial intelligence has not yet undergone this transition. AEGIS is the architecture to make it happen.
 
@@ -86,7 +97,7 @@ Artificial intelligence has not yet undergone this transition. AEGIS is the arch
 
 ## Core Principles
 
-**Capability without constraint is not intelligence.**
+**Capability without constraint is not intelligence™**
 
 AEGIS is built on eight constitutional articles:
 
@@ -112,11 +123,13 @@ Read the full constitution: [aegis-constitution](https://github.com/aegis-initia
 
 ## Contributing
 
-AEGIS is an open governance architecture. Contributions are welcome from researchers, engineers, security professionals, policy teams, and anyone committed to building safer AI systems.
+AEGIS is an open governance architecture. Contributions are welcome from researchers, engineers, security professionals,
+policy teams, and anyone committed to building safer AI systems.
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
 - Review open [RFCs](https://github.com/aegis-initiative/aegis/tree/main/rfc) to propose architectural improvements
-- Join [GitHub Discussions](https://github.com/aegis-initiative/aegis-initiative/discussions) to engage with the community
+- Join [GitHub Discussions](https://github.com/aegis-initiative/aegis-initiative/discussions) to engage with the
+community
 - Report issues via the appropriate repo's issue tracker
 
 ---

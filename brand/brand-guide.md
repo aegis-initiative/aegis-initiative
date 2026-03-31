@@ -53,7 +53,8 @@ Source files for monochrome variants are in the branding kit under `Monochrome L
 
 ### Clear Space
 
-Maintain a clear space around the logo equal to the height of the diamond element (approximately 60% of total logo height). No text, graphics, or other logos should intrude into this space.
+Maintain a clear space around the logo equal to the height of the diamond element (approximately 60% of total logo
+height). No text, graphics, or other logos should intrude into this space.
 
 ```
     ┌─────────────────────┐
@@ -74,7 +75,8 @@ Maintain a clear space around the logo equal to the height of the diamond elemen
 
 ## Wordmark
 
-The AEGIS wordmark combines the logo with the "AEGIS" text set alongside. It is the preferred representation when horizontal space allows.
+The AEGIS wordmark combines the logo with the "AEGIS" text set alongside. It is the preferred representation when
+horizontal space allows.
 
 ### Wordmark Assets
 
@@ -133,7 +135,8 @@ In UI contexts (websites, applications), brand colors are adjusted for WCAG 2.1 
 - Brand Gray becomes `#595959` for text on light backgrounds (7:1 contrast)
 - Brand Blue becomes `#4da6f0` on dark backgrounds
 
-Always use the CSS custom properties (`--color-accent`, `--color-brand-gray`, etc.) rather than raw hex values so themes are respected automatically.
+Always use the CSS custom properties (`--color-accent`, `--color-brand-gray`, etc.) rather than raw hex values so themes
+are respected automatically.
 
 ---
 
@@ -166,7 +169,8 @@ The branding kit includes these additional families for print, marketing, and ex
 
 ## Favicon and Icons
 
-The branding kit includes six icon variants (`Icon 1` through `Icon 6`) in AI, JPG, PNG, and SVG formats. The primary favicon uses the shield+diamond mark as an SVG (`favicon.svg`).
+The branding kit includes six icon variants (`Icon 1` through `Icon 6`) in AI, JPG, PNG, and SVG formats. The primary
+favicon uses the shield+diamond mark as an SVG (`favicon.svg`).
 
 A 16x16 brand icon is also available in the branding kit under `Brand Icon (16 by 16)/`.
 
@@ -189,6 +193,7 @@ AEGIS_{type}_{variant}.{ext}
 ```
 
 Examples:
+
 - `AEGIS_logo_aegis-initiative.svg`
 - `AEGIS_wordmark.svg`
 - `AEGIS_wordmark_dark.svg`

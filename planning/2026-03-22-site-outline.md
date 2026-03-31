@@ -1,4 +1,5 @@
 # AEGIS Initiative — Site Outline
+
 **Version:** 1.0
 **Date:** March 22, 2026
 **Status:** Planning / Pre-build
@@ -7,7 +8,10 @@
 
 ## Overview
 
-This document defines the planned structure and content scope for the aegis-initiative public website. The site serves as the public face of the AEGIS Initiative organization — its PR, policy engagement, published analysis, and press presence.
+This document defines the planned structure and content scope for the
+aegis-initiative public website. The site serves as the public face of
+the AEGIS Initiative organization — its PR, policy engagement, published
+analysis, and press presence.
 
 **Stack (planned):** Astro + Tailwind CSS + MDX
 **Aesthetic:** Document-first, editorial, W3C/NIST-style
@@ -18,6 +22,7 @@ This document defines the planned structure and content scope for the aegis-init
 ## Site Structure
 
 ### Home
+
 - Mission statement
 - Brief org description
 - Current focus / what AEGIS is working on now
@@ -27,6 +32,7 @@ This document defines the planned structure and content scope for the aegis-init
 ---
 
 ### About
+
 - What AEGIS is
 - The three-layer architecture (constitution / governance / initiative)
 - Founding principles
@@ -39,6 +45,7 @@ This document defines the planned structure and content scope for the aegis-init
 ---
 
 ### The Constitution
+
 - Brief description of the AEGIS Constitution
 - Link to aegis-constitution.com
 - Version history and submission record
@@ -47,6 +54,7 @@ This document defines the planned structure and content scope for the aegis-init
 ---
 
 ### Policy & Research
+
 *Audience: policymakers, academics, standards bodies, researchers*
 
 - Published papers (with DOI / Zenodo links where applicable)
@@ -59,6 +67,7 @@ This document defines the planned structure and content scope for the aegis-init
 ---
 
 ### Press
+
 *Audience: journalists, LinkedIn followers, general public*
 
 - Published articles (LinkedIn and other platforms)
@@ -73,6 +82,7 @@ This document defines the planned structure and content scope for the aegis-init
 ---
 
 ### News & Updates
+
 - Unified timestamped feed of all AEGIS activity
 - New publications
 - Policy developments AEGIS is responding to
@@ -81,6 +91,7 @@ This document defines the planned structure and content scope for the aegis-init
 ---
 
 ### Contact
+
 - General contact
 - Press inquiries
 - Policy engagement and collaboration requests
@@ -103,7 +114,8 @@ The following documents are complete and ready to drop into the site on launch:
 ## RSS Strategy
 
 - **Master feed** — all publications, policy responses, press releases, and updates in a single feed. Launch with this.
-- **Split feeds** (future) — separate Policy & Research and Press feeds if content volume warrants subscriber segmentation.
+- **Split feeds** (future) — separate Policy & Research and Press feeds if content volume warrants subscriber
+segmentation.
 - Every publication gets a timestamp, version number, and permanent URL on day one.
 
 ---

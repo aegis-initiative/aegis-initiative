@@ -2,25 +2,29 @@
 
 This directory contains the public-facing roadmap for the AEGIS Initiative.
 
-For detailed, internal architecture and specification roadmaps, see the [aegis governance repo](https://github.com/aegis-initiative/aegis/tree/main/roadmap).
+For detailed, internal architecture and specification roadmaps, see the [aegis governance
+repo](https://github.com/aegis-initiative/aegis/tree/main/roadmap).
 
 ---
 
 ## Current Phase: Foundation (Q1 2026)
 
 ### Governance & Architecture
+
 - [x] AEGIS Constitution v0.1 published
 - [x] Core governance doctrine established
 - [x] Architecture Decision Records (ADR) framework in place
 - [x] Cross-component JSON Schema definitions started
 
 ### Public Engagement
+
 - [x] NIST AI Risk Management Framework submission (March 2026)
 - [x] Org-level GitHub presence established
 - [x] Public documentation site launch (aegis-docs.com)
 - [x] AEGIS Initiative website (aegis-initiative.com)
 
 ### Core Platform
+
 - [x] Governance runtime engine (aegis-core) — v0.1.2 stable, 403 tests
 - [x] Platform API surface (aegis-platform) — operator dashboard and demo API live
 - [x] Client SDK (aegis-sdk) — TypeScript and Python packages published
@@ -40,12 +44,14 @@ For detailed, internal architecture and specification roadmaps, see the [aegis g
 ## Future Phases
 
 ### Expand (Q3–Q4 2026)
+
 - Multi-tenant governance support
 - Plugin architecture for custom policy engines
 - Community governance proposals (RFC process)
 - SDK ecosystem expansion
 
 ### Scale (2027+)
+
 - Enterprise deployment patterns
 - Compliance framework integrations (SOC 2, ISO 27001)
 - Federated governance across organizational boundaries
@@ -63,4 +69,5 @@ For detailed, internal architecture and specification roadmaps, see the [aegis g
 
 ## How to Contribute
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines on how to get involved. The roadmap is shaped by community input — open an issue or discussion to propose priorities.
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines on how to get involved. The roadmap is shaped by community
+input — open an issue or discussion to propose priorities.
