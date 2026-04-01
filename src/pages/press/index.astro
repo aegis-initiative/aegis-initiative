@@ -12,23 +12,114 @@ import DocLayout from "../../layouts/DocLayout.astro";
   <hr />
 
   <section>
-    <h2>Press Releases</h2>
+    <h2>Publications</h2>
     <p>
-      Press releases are being organized and will be published here with
-      timestamps and permanent URLs as they are issued. The AEGIS Initiative
-      launched publicly in March 2026.
+      Preprints and formal submissions from the AEGIS Initiative. Peer-reviewed
+      versions will be linked when published.
+    </p>
+
+    <h3>IEEE Computer — Special Issue on AI Governance and Compliance</h3>
+    <p>
+      <strong>"AEGIS: A Constitutional Governance Architecture for Autonomous AI Agents"</strong><br />
+      Kenneth Tannenbaum, AEGIS Initiative. Submitted March 2026.<br />
+      DOI: <a href="https://doi.org/10.5281/zenodo.19223924">10.5281/zenodo.19223924</a>
+    </p>
+    <p>
+      Presents AEGIS as a constitutional governance architecture that enforces
+      deterministic policy at the agent action boundary — post-reasoning,
+      pre-execution. Satisfies Anderson's reference monitor properties, aligns
+      with all four functions of the NIST AI Risk Management Framework, and
+      introduces a decentralized federation model for cross-organizational
+      governance intelligence sharing.
+    </p>
+
+    <h3>IEEE Data Descriptions</h3>
+    <p>
+      <strong>"ATX-1: AEGIS Threat Matrix for AI Governance Systems"</strong><br />
+      Kenneth Tannenbaum, AEGIS Initiative. Submitted March 2026.<br />
+      DOI: <a href="https://doi.org/10.5281/zenodo.19251098">10.5281/zenodo.19251098</a>
+    </p>
+    <p>
+      Machine-readable threat intelligence dataset in STIX 2.1 format. 10 tactics,
+      29 techniques cataloging failure modes specific to autonomous AI agents
+      interacting with operational infrastructure. Grounded in the Agents of Chaos
+      study (Shapira et al. 2026) and validated through adversarial testing of
+      the AEGIS reference implementation.
+    </p>
+
+    <h3>NIST AI Risk Management Framework</h3>
+    <p>
+      <strong>"AEGIS: A Constitutional Governance Architecture — NIST AI RMF Position Statement"</strong><br />
+      Finnoybu IP LLC. Submitted March 7, 2026.
+    </p>
+    <p>
+      Unsolicited position statement proposing architectural governance as a
+      complementary layer to existing AI risk management approaches. References
+      the AEGIS Constitution v0.1.1.
+    </p>
+
+    <h3>NCCoE — AI Agent Identity &amp; Access Management</h3>
+    <p>
+      <strong>"AEGIS: AI Agent Identity, Authorization, and Governance"</strong><br />
+      Finnoybu IP LLC. Submitted March 2026.
+    </p>
+    <p>
+      Response to the National Cybersecurity Center of Excellence (NCCoE) project
+      on AI Agent Identity and Access Management. Proposes constitutional
+      governance as a framework for agent identity binding, capability-based
+      authorization, and deterministic enforcement.
     </p>
   </section>
 
   <hr />
 
   <section>
-    <h2>Published Articles</h2>
+    <h2>Software Releases</h2>
+
+    <h3>aegis-core v0.1.2 — Stable Reference Implementation</h3>
     <p>
-      Articles and public communications are being consolidated. Links to
-      publications on LinkedIn and other platforms will be added here with
-      publication dates and summaries.
+      Released March 31, 2026.<br />
+      DOI: <a href="https://doi.org/10.5281/zenodo.19355478">10.5281/zenodo.19355478</a> |
+      <a href="https://github.com/aegis-initiative/aegis-core/releases/tag/v0.1.2">GitHub Release</a>
     </p>
+    <p>
+      Python reference implementation of the AEGIS governance enforcement engine.
+      403 tests, 100% ATX-1 technique coverage, 9 rounds of adversarial red/blue
+      team testing. Implements the AEGIS Governance Protocol (AGP-1) with
+      five-dimension risk scoring, capability-based access control, and immutable
+      audit trail.
+    </p>
+
+    <h3>ATX-1 v2.1 — AEGIS Threat Matrix</h3>
+    <p>
+      Released March 27, 2026.<br />
+      DOI: <a href="https://doi.org/10.5281/zenodo.19251098">10.5281/zenodo.19251098</a> |
+      <a href="https://aegis-governance.com">aegis-governance.com</a>
+    </p>
+    <p>
+      10 tactics, 29 techniques cataloging agentic AI failure modes.
+      Machine-readable STIX 2.1 threat intelligence. Includes TA010
+      (Act Beyond Governance Interpretation) — a novel tactic discovered
+      during adversarial testing.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Milestones</h2>
+    <ul>
+      <li><strong>2026-03-31</strong> — aegis-core v0.1.2 stable release (DOI: 10.5281/zenodo.19355478)</li>
+      <li><strong>2026-03-27</strong> — ATX-1 v2.1 released with TA010 novel tactic (DOI: 10.5281/zenodo.19251098)</li>
+      <li><strong>2026-03-26</strong> — Responsible disclosure filed with Anthropic (CLAUDE.md injection, HackerOne #3630951)</li>
+      <li><strong>2026-03-25</strong> — IEEE Computer preprint published on Zenodo</li>
+      <li><strong>2026-03-24</strong> — Six AEGIS sites deployed across ecosystem</li>
+      <li><strong>2026-03-22</strong> — AEGIS Constitution v0.2.0 published (eleven articles)</li>
+      <li><strong>2026-03-07</strong> — NIST AI RMF position statement submitted</li>
+      <li><strong>2026-03-05</strong> — AEGIS public release (v0.1.0)</li>
+      <li><strong>2026-02-04</strong> — First commit</li>
+      <li><strong>2026-01-26</strong> — Project conceived</li>
+    </ul>
   </section>
 
   <hr />
