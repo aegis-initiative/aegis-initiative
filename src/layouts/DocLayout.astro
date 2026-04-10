@@ -2,7 +2,9 @@
 import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
 import Footer from "../components/Footer.astro";
-import AegisWordmark from "../components/AegisWordmark.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import Breadcrumb from "@aegis-initiative/design-system/components/Breadcrumb.astro";
+import AegisWordmark from "@aegis-initiative/design-system/components/AegisWordmark.astro";
 
 interface Props {
   title: string;
@@ -13,6 +15,31 @@ const {
   title,
   description = "The public home of the AEGIS Initiative — policy engagement, published analysis, and press presence",
 } = Astro.props;
+
+// Auto-generate breadcrumbs from URL path
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const segments = pathname.split('/').filter(Boolean);
+
+const sectionLabels: Record<string, string> = {
+  about: 'About',
+  ecosystem: 'Ecosystem',
+  research: 'Research & Policy',
+  press: 'Press',
+  contact: 'Contact',
+  legal: 'Legal',
+};
+
+const breadcrumbItems: { label: string; href?: string }[] = [];
+if (segments.length > 0 && sectionLabels[segments[0]]) {
+  if (segments.length === 1) {
+    // Section index — just show section name as current page
+    breadcrumbItems.push({ label: sectionLabels[segments[0]] });
+  } else {
+    // Subpage — section links to its index, current page is plain text
+    breadcrumbItems.push({ label: sectionLabels[segments[0]], href: `/${segments[0]}/` });
+    breadcrumbItems.push({ label: title });
+  }
+}
 ---
 
 <!doctype html>
@@ -85,6 +112,7 @@ const {
   </head>
   <body>
     <Header />
+    {breadcrumbItems.length > 0 && <Breadcrumb items={breadcrumbItems} homeLabel="AEGIS Initiative" />}
     <div class="page-wrapper">
       <Sidebar />
       <main class="main-content">
@@ -94,200 +122,23 @@ const {
           <AegisWordmark height={720} />
         </div>
       </main>
+      <TableOfContents />
     </div>
   </body>
 </html>
 
 <style is:global>
   /* ============================================================
-     Self-hosted Fonts
+     AEGIS Design System — imported from shared package
      ============================================================ */
-  @font-face {
-    font-family: "IBM Plex Sans";
-    src: url("/fonts/ibmplexsans-variablefont_wdthwght-webfont.woff2") format("woff2");
-    font-weight: 100 700;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "IBM Plex Sans";
-    src: url("/fonts/ibmplexsans-italic-variablefont_wdthwght-webfont.woff2") format("woff2");
-    font-weight: 100 700;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-light-webfont.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-lightitalic-webfont.woff2") format("woff2");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-regular-webfont.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-italic-webfont.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-medium-webfont.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-mediumitalic-webfont.woff2") format("woff2");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-semibold-webfont.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("/fonts/poppins-semibolditalic-webfont.woff2") format("woff2");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-  }
+  @import '@aegis-initiative/design-system/css/fonts.css';
+  @import '@aegis-initiative/design-system/css/tokens.css';
+  @import '@aegis-initiative/design-system/css/reset.css';
 
   /* ============================================================
-     CSS Reset
+     Site-specific overrides
      ============================================================ */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* ============================================================
-     CSS Variables — Light Theme
-     ============================================================ */
-  :root,
-  [data-theme="light"] {
-    --color-bg: #ffffff;
-    --color-bg-subtle: #f5f5f5;
-    --color-bg-muted: #eeeeee;
-    --color-border: #d4d4d4;
-    --color-border-subtle: #e8e8e8;
-    --color-text: #161616;
-    --color-text-secondary: #595959;
-    --color-text-muted: #595959;
-
-    --color-accent: #0062a5;
-    --color-accent-brand: #0062a5;
-    --color-accent-low: #e8f4fd;
-    --color-accent-high: #005ea2;
-
-    --color-brand-gray: #595959;
-
-    --header-bg: #fafafa;
-    --header-border: #777777;
-    --header-text: #707070;
-    --header-text-muted: #707070;
-    --sidebar-bg: #ffffff;
-    --subheader-bg: #005a9e;
-    --subheader-text: #ffffff;
-
-    --search-modal-bg: rgba(10, 22, 40, 0.5);
-    --search-dialog-bg: #ffffff;
-    --search-border: #d4d4d4;
-    --search-accent: #0062a5;
-    --search-text: #161616;
-    --search-shortcut-bg: #eeeeee;
-  }
-
-  /* ============================================================
-     CSS Variables — Dark Theme
-     ============================================================ */
-  [data-theme="dark"] {
-    --color-bg: #161616;
-    --color-bg-subtle: #1e1e1e;
-    --color-bg-muted: #2a2a2a;
-    --color-border: #3a3a3a;
-    --color-border-subtle: #2a2a2a;
-    --color-text: #e8e8e8;
-    --color-text-secondary: #b0b0b0;
-    --color-text-muted: #888888;
-
-    --color-accent: #4da6f0;
-    --color-accent-brand: #0084e7;
-    --color-accent-low: #0d2640;
-    --color-accent-high: #4da6f0;
-
-    --color-brand-gray: #999999;
-
-    --header-bg: #000000;
-    --header-border: #000000;
-    --header-text: #e8e8e8;
-    --header-text-muted: #999999;
-    --sidebar-bg: #161616;
-    --subheader-bg: #005ea2;
-    --subheader-text: #ffffff;
-
-    --search-modal-bg: rgba(10, 22, 40, 0.7);
-    --search-dialog-bg: #161616;
-    --search-border: #3a3a3a;
-    --search-accent: #4da6f0;
-    --search-text: #e8e8e8;
-    --search-shortcut-bg: #2a2a2a;
-  }
-
-  /* ============================================================
-     Base Styles
-     ============================================================ */
-  html {
-    font-family: "Poppins", system-ui, sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  @media (min-width: 560px) {
-    html {
-      font-size: 16px;
-    }
-  }
-
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
   h1, h2, h3, h4, h5, h6 {
-    font-family: "IBM Plex Sans", system-ui, sans-serif;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0.01em;
-    color: var(--color-text);
     scroll-margin-top: calc(5rem + var(--aegis-nav-height, 0px));
   }
 
@@ -295,57 +146,20 @@ const {
     scroll-margin-top: calc(6.55rem + var(--aegis-nav-height, 0px));
   }
 
-  h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-  h2 { font-size: 2rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-  h3 { font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-
-  p { margin-bottom: 1rem; }
-
-  hr {
-    margin: 1.5rem 0;
-    border: none;
-    border-top: 1px solid var(--color-border-subtle);
-  }
-
-  ul, ol {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-  }
-
-  li { margin-bottom: 0.25rem; }
-
-  a {
-    color: var(--color-accent);
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: var(--color-accent-high);
-  }
-
   /* ============================================================
-     Tables
+     Breadcrumb alignment with sidebar
      ============================================================ */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1.5rem;
+  @media (min-width: 1024px) {
+    .aegis-breadcrumb {
+      padding-left: calc(280px + 2rem) !important;
+    }
   }
 
-  th, td {
-    text-align: left;
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid var(--color-border-subtle);
-    vertical-align: top;
+  /* ToC links need higher specificity than global a reset */
+  .toc-list a,
+  .toc-dropdown-list a {
+    text-decoration: none;
   }
-
-  th {
-    font-weight: 600;
-    color: var(--color-text);
-    border-bottom-color: var(--color-border);
-  }
-
-  tr:last-child td { border-bottom: none; }
 
   /* ============================================================
      Page Layout
@@ -383,6 +197,12 @@ const {
     .main-content {
       padding: 2rem;
       margin-left: 280px;
+    }
+  }
+
+  @media (min-width: 1367px) {
+    .main-content {
+      margin-right: 320px;
     }
   }
 </style>

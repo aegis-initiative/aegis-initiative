@@ -1,0 +1,142 @@
+/**
+ * AEGIS Design System — CSS Custom Properties
+ *
+ * Import this file to get the full AEGIS token set as CSS custom properties.
+ * Tokens adapt automatically to light/dark themes via [data-theme] attribute.
+ *
+ * Usage:
+ *   @import '@aegis-initiative/design-system/css/tokens.css';
+ *
+ * All color pairings meet WCAG 2.1 AA standards.
+ */
+
+/* ============================================================
+   Light Theme (default)
+   ============================================================ */
+:root,
+[data-theme="light"] {
+  /* --- Surface colors --- */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f5f5f5;
+  --color-bg-muted: #eeeeee;
+
+  /* --- Border colors --- */
+  --color-border: #d4d4d4;
+  --color-border-subtle: #e8e8e8;
+
+  /* --- Text colors --- */
+  --color-text: #161616;
+  --color-text-secondary: #595959;
+  --color-text-muted: #595959;
+
+  /* --- Accent colors --- */
+  --color-accent: #0062a5;
+  --color-accent-brand: #0062a5;
+  --color-accent-low: #e8f4fd;
+  --color-accent-high: #005ea2;
+
+  /* --- Brand --- */
+  --color-brand-gray: #595959;
+
+  /* --- Chrome --- */
+  --header-bg: #fafafa;
+  --header-border: #777777;
+  --header-text: #707070;
+  --header-text-muted: #707070;
+  --sidebar-bg: #ffffff;
+  --subheader-bg: #005a9e;
+  --subheader-text: #ffffff;
+
+  /* --- Search --- */
+  --search-modal-bg: rgba(10, 22, 40, 0.5);
+  --search-dialog-bg: #ffffff;
+  --search-border: #d4d4d4;
+  --search-accent: #0062a5;
+  --search-text: #161616;
+  --search-shortcut-bg: #eeeeee;
+
+  /* --- Aside: Doctrine (blue) --- */
+  --aside-doctrine-border: var(--color-accent);
+  --aside-doctrine-bg: #e9f0f8;
+  --aside-doctrine-text: var(--color-accent);
+
+  /* --- Aside: Application (green) --- */
+  --aside-application-border: #006b2d;
+  --aside-application-bg: #e9f8ef;
+  --aside-application-text: #006b2d;
+
+  /* --- Aside: Constraint (amber) --- */
+  --aside-constraint-border: #855400;
+  --aside-constraint-bg: #f8f2e9;
+  --aside-constraint-text: #855400;
+
+  /* --- Aside: Prohibition (red) --- */
+  --aside-prohibition-border: #a5000b;
+  --aside-prohibition-bg: #f8e9ea;
+  --aside-prohibition-text: #a5000b;
+}
+
+/* ============================================================
+   Dark Theme
+   ============================================================ */
+[data-theme="dark"] {
+  /* --- Surface colors --- */
+  --color-bg: #161616;
+  --color-bg-subtle: #1e1e1e;
+  --color-bg-muted: #2a2a2a;
+
+  /* --- Border colors --- */
+  --color-border: #3a3a3a;
+  --color-border-subtle: #2a2a2a;
+
+  /* --- Text colors --- */
+  --color-text: #e8e8e8;
+  --color-text-secondary: #b0b0b0;
+  --color-text-muted: #888888;
+
+  /* --- Accent colors --- */
+  --color-accent: #4da6f0;
+  --color-accent-brand: #0084e7;
+  --color-accent-low: #0d2640;
+  --color-accent-high: #4da6f0;
+
+  /* --- Brand --- */
+  --color-brand-gray: #999999;
+
+  /* --- Chrome --- */
+  --header-bg: #000000;
+  --header-border: #000000;
+  --header-text: #e8e8e8;
+  --header-text-muted: #999999;
+  --sidebar-bg: #161616;
+  --subheader-bg: #005ea2;
+  --subheader-text: #ffffff;
+
+  /* --- Search --- */
+  --search-modal-bg: rgba(10, 22, 40, 0.7);
+  --search-dialog-bg: #161616;
+  --search-border: #3a3a3a;
+  --search-accent: #4da6f0;
+  --search-text: #e8e8e8;
+  --search-shortcut-bg: #2a2a2a;
+
+  /* --- Aside: Doctrine (blue) --- */
+  --aside-doctrine-border: #73b3e7;
+  --aside-doctrine-bg: #162e51;
+  --aside-doctrine-text: #73b3e7;
+
+  /* --- Aside: Application (green) --- */
+  --aside-application-border: #73e7a3;
+  --aside-application-bg: #16512f;
+  --aside-application-text: #73e7a3;
+
+  /* --- Aside: Constraint (amber) --- */
+  --aside-constraint-border: #e7bc73;
+  --aside-constraint-bg: #513b16;
+  --aside-constraint-text: #e7bc73;
+
+  /* --- Aside: Prohibition (red) --- */
+  --aside-prohibition-border: #ec8e94;
+  --aside-prohibition-bg: #51161a;
+  --aside-prohibition-text: #ec8e94;
+}

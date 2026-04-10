@@ -1,5 +1,5 @@
 ---
-import AegisLogo from './AegisLogo.astro';
+import AegisLogo from '@aegis-initiative/design-system/components/AegisLogo.astro';
 import Search from './Search.astro';
 ---
 
@@ -176,6 +176,45 @@ import Search from './Search.astro';
   @media (min-width: 1024px) {
     .search-btn { display: none; }
     .menu-btn { display: none; }
+  }
+
+  /* ── ToC button (injected by TableOfContents.astro) ──────────── */
+
+  :global(.toc-btn) {
+    display: none;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--header-text);
+    font-size: 0.8125rem;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    transition: color 0.15s;
+  }
+
+  :global(.toc-btn:hover),
+  :global(.toc-btn[aria-expanded="true"]) {
+    color: var(--color-accent);
+  }
+
+  :global(.toc-btn svg) {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  :global(.toc-btn[aria-expanded="true"] svg) {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    :global(.toc-btn) { display: flex; }
   }
 </style>
 

@@ -1,0 +1,51 @@
+{
+  "name": "@aegis-initiative/design-system",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AEGIS Initiative shared design tokens, CSS custom properties, and Astro components",
+  "license": "Apache-2.0",
+  "author": "Finnoybu IP LLC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aegis-initiative/aegis-initiative.git",
+    "directory": "packages/aegis-design-system"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens": "./src/tokens/index.ts",
+    "./tokens/colors": "./src/tokens/colors.ts",
+    "./tokens/typography": "./src/tokens/typography.ts",
+    "./tokens/spacing": "./src/tokens/spacing.ts",
+    "./tokens/breakpoints": "./src/tokens/breakpoints.ts",
+    "./tokens/surfaces": "./src/tokens/surfaces.ts",
+    "./css/tokens.css": "./src/css/tokens.css",
+    "./css/reset.css": "./src/css/reset.css",
+    "./css/fonts.css": "./src/css/fonts.css",
+    "./components": "./src/components/index.ts",
+    "./components/Aside.astro": "./src/components/Aside.astro",
+    "./components/AegisLogo.astro": "./src/components/AegisLogo.astro",
+    "./components/AegisWordmark.astro": "./src/components/AegisWordmark.astro",
+    "./components/Breadcrumb.astro": "./src/components/Breadcrumb.astro",
+    "./components/PrevNext.astro": "./src/components/PrevNext.astro"
+  },
+  "files": [
+    "src/"
+  ],
+  "keywords": [
+    "aegis",
+    "design-system",
+    "design-tokens",
+    "astro-components"
+  ],
+  "peerDependencies": {
+    "astro": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "astro": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,185 @@
+---
+import DocLayout from "../../layouts/DocLayout.astro";
+---
+
+<DocLayout title="The AEGIS Ecosystem" description="A coordinated set of specifications, tools, and documentation — each component with a clear scope and dedicated site.">
+  <h1>The AEGIS Ecosystem</h1>
+
+  <section>
+    <p>
+      AEGIS is a coordinated set of specifications, tools, and documentation.
+      Each component has a clear scope and a dedicated site. Together, they form
+      a layered architecture that moves from constitutional principles through
+      technical governance to runtime enforcement.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Three-Layer Architecture</h2>
+    <p>
+      The AEGIS ecosystem is organized into three reinforcing layers. Each layer
+      builds on the one below it, ensuring that governance principles are
+      traceable from high-level doctrine all the way to runtime enforcement.
+    </p>
+
+    <h3>1. Constitution</h3>
+    <p>
+      The foundational layer. The <a href="https://aegis-constitution.com">AEGIS Constitution</a>
+      defines the immutable principles and articles that all AEGIS-governed AI
+      systems must uphold. It is versioned using calendar versioning (CalVer),
+      citeable by article and section, and openly licensed. The Constitution is
+      the root of authority in the AEGIS ecosystem — every governance decision,
+      policy evaluation, and enforcement action traces back to a constitutional
+      article.
+    </p>
+
+    <h3>2. Governance</h3>
+    <p>
+      The specification layer. <a href="https://aegis-governance.com">AEGIS Governance</a>
+      translates constitutional principles into technical protocols, threat
+      taxonomies, and formal specifications. This includes the AGP-1 governance
+      protocol, the ATX-1 threat matrix (10 tactics, 29 techniques), and the RFC
+      process that governs how the ecosystem evolves. Governance specs are
+      published with DOIs for academic citation.
+    </p>
+
+    <h3>3. Implementation</h3>
+    <p>
+      The enforcement layer. The runtime engine (<a href="https://github.com/aegis-initiative/aegis-core">aegis-core</a>),
+      client SDKs (<a href="https://github.com/aegis-initiative/aegis-sdk">aegis-sdk</a>),
+      and operator platform (<a href="https://aegis-platform.net">aegis-platform</a>)
+      make governance enforceable in production. Policies defined in the
+      governance layer are evaluated deterministically at runtime before any AI
+      action is permitted.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Projects &amp; Sites</h2>
+    <p>
+      Every public-facing component of the AEGIS ecosystem is listed below. Each
+      project has its own repository, documentation, and — where applicable — a
+      dedicated website.
+    </p>
+
+    <div class="eco-grid">
+      <a href="https://aegis-constitution.com" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>Constitution</h3>
+        <p>The canonical governance charter — 11 articles defining the boundaries of AI autonomy. CalVer versioned, citeable, openly licensed.</p>
+        <span class="eco-card-domain">aegis-constitution.com</span>
+      </a>
+
+      <a href="https://aegis-governance.com" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>Governance</h3>
+        <p>Protocol specifications, threat taxonomy, RFCs, and the ATX-1 threat matrix for agentic AI systems.</p>
+        <span class="eco-card-domain">aegis-governance.com</span>
+      </a>
+
+      <a href="https://aegis-docs.com" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>Documentation</h3>
+        <p>Developer guides, integration tutorials, and the technical reference for building with AEGIS.</p>
+        <span class="eco-card-domain">aegis-docs.com</span>
+      </a>
+
+      <a href="https://aegis-federation.com" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>Federation</h3>
+        <p>Cross-domain machine discovery protocol (RFC-0016) for distributed AI governance across organizational boundaries.</p>
+        <span class="eco-card-domain">aegis-federation.com</span>
+      </a>
+
+      <a href="https://github.com/aegis-initiative/aegis-core" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>Core Runtime</h3>
+        <p>The Python enforcement engine — a canonical implementation of AGP-1 that evaluates governance policies at runtime.</p>
+        <span class="eco-card-domain">github.com/aegis-initiative/aegis-core</span>
+      </a>
+
+      <a href="https://github.com/aegis-initiative/aegis-sdk" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>SDKs</h3>
+        <p>TypeScript and Python client libraries for integrating AEGIS governance into your applications.</p>
+        <span class="eco-card-domain">github.com/aegis-initiative/aegis-sdk</span>
+      </a>
+
+      <a href="https://github.com/aegis-initiative/aegis-labs" class="eco-card" target="_blank" rel="noopener noreferrer">
+        <h3>Labs</h3>
+        <p>Research sandbox, adversarial testing, and experiments exploring the boundaries of AI governance enforcement.</p>
+        <span class="eco-card-domain">github.com/aegis-initiative/aegis-labs</span>
+      </a>
+    </div>
+  </section>
+
+  <hr />
+
+  <section>
+    <p>
+      For project details, version information, and licensing, see the
+      <a href="/ecosystem/projects/">Projects</a> page. For the development
+      timeline, see the <a href="/ecosystem/roadmap/">Public Roadmap</a>.
+    </p>
+  </section>
+</DocLayout>
+
+<style>
+  .eco-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .eco-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .eco-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .eco-card h3 {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .eco-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+  }
+
+  .eco-card-domain {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 1200px) {
+    .eco-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .eco-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

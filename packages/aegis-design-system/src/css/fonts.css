@@ -1,0 +1,98 @@
+/**
+ * AEGIS Design System — Font Face Declarations
+ *
+ * Self-hosted @font-face rules for IBM Plex Sans and Poppins.
+ * Font files must be served from /fonts/ on the consuming site.
+ *
+ * Usage:
+ *   @import '@aegis-initiative/design-system/css/fonts.css';
+ *
+ * Copy fonts to your public/fonts/ directory. The aegis-design-system
+ * package does not ship font files — they are hosted per-site.
+ */
+
+/* IBM Plex Sans — Variable (normal) */
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/ibmplexsans-variablefont_wdthwght-webfont.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* IBM Plex Sans — Variable (italic) */
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/ibmplexsans-italic-variablefont_wdthwght-webfont.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Poppins — Light (300) */
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-light-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-lightitalic-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Poppins — Regular (400) */
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-italic-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Poppins — Medium (500) */
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-mediumitalic-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Poppins — Semi-Bold (600) */
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-semibolditalic-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}

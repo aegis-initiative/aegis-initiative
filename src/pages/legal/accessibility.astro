@@ -1,0 +1,116 @@
+---
+import DocLayout from "../../layouts/DocLayout.astro";
+---
+
+<DocLayout title="Accessibility Statement" description="Accessibility conformance statement for AEGIS Initiative websites.">
+  <h1>Accessibility Statement</h1>
+
+  <p><em>Last evaluated: March 21, 2026</em></p>
+
+  <p>
+    AEGIS Operations LLC is committed to ensuring that AEGIS Initiative websites are accessible to all users, including
+    those who rely on assistive technologies.
+  </p>
+
+  <hr />
+
+  <h2>Conformance Target</h2>
+
+  <p>
+    AEGIS Initiative websites target <strong>WCAG 2.1 Level AA</strong> conformance. WCAG (Web Content Accessibility
+    Guidelines) is the internationally recognized standard for web accessibility, published by the W3C Web Accessibility
+    Initiative.
+  </p>
+
+  <hr />
+
+  <h2>Current Status</h2>
+
+  <p>As of the evaluation date above, the Services achieve:</p>
+
+  <ul>
+    <li>
+      <strong>100/100 Lighthouse Accessibility</strong> score across all pages in both light and dark themes
+    </li>
+    <li>Semantic HTML throughout &mdash; headings, landmarks, navigation, and content structure</li>
+    <li>
+      Color contrast ratios meeting or exceeding <strong>WCAG AA</strong> (4.5:1) for all text; most pairings exceed
+      <strong>AAA</strong> (7:1)
+    </li>
+    <li>Keyboard-navigable interface &mdash; all interactive elements reachable via keyboard</li>
+    <li>Screen reader compatibility &mdash; ARIA labels, roles, and states on all controls</li>
+    <li>Responsive design &mdash; content accessible from 320px viewport width and up</li>
+    <li>Respects <code>prefers-color-scheme</code> user preference via automatic theme detection</li>
+  </ul>
+
+  <hr />
+
+  <h2>Design System</h2>
+
+  <p>
+    The color system is aligned with the U.S. Web Design System (USWDS) grayscale and bluescale tokens, chosen
+    specifically for their accessibility properties:
+  </p>
+
+  <ul>
+    <li>
+      <strong>Accent blue</strong> (<code>#005ea2</code> light / <code>#73b3e7</code> dark) &mdash; meets WCAG AA on
+      respective backgrounds; dark theme meets AAA
+    </li>
+    <li>
+      <strong>Text colors</strong> &mdash; primary and secondary text exceed AAA (7:1); muted text and accent links meet
+      AA (4.5:1)
+    </li>
+    <li><strong>Focus indicators</strong> &mdash; visible focus rings on all interactive elements</li>
+  </ul>
+
+  <hr />
+
+  <h2>Known Limitations</h2>
+
+  <ul>
+    <li>
+      CSS transitions on navigation elements do not currently respect <code>prefers-reduced-motion</code>. These are
+      minor visual transitions (0.15&ndash;0.2s) that do not affect content access.
+    </li>
+    <li>Dark mode contrast was additionally verified via manual calculation against WCAG thresholds.</li>
+  </ul>
+
+  <p>If you encounter an accessibility barrier not listed here, please let us know.</p>
+
+  <hr />
+
+  <h2>Feedback &amp; Accommodation</h2>
+
+  <p>
+    If you experience difficulty accessing any part of the Services, or if you need content in an alternative format,
+    please contact us:
+  </p>
+
+  <p>
+    <strong>Email:</strong> <a href="mailto:contact@aegis-initiative.com">contact@aegis-initiative.com</a><br />
+    <strong>Mailing address and additional contacts:</strong> <a href="/legal/impressum/#contact">Impressum</a>
+  </p>
+
+  <p>We aim to respond to accessibility feedback within five business days.</p>
+
+  <hr />
+
+  <h2>Evaluation Method</h2>
+
+  <p>Accessibility is evaluated using a combination of:</p>
+
+  <ul>
+    <li>Lighthouse accessibility audits (Chrome DevTools)</li>
+    <li>Manual keyboard navigation testing</li>
+    <li>Semantic HTML and ARIA review</li>
+    <li>Color contrast verification against WCAG 2.1 AA and AAA thresholds</li>
+  </ul>
+
+  <hr />
+
+  <p>
+    <em>AEGIS&trade;</em> | <em>&ldquo;Capability without constraint is not intelligence&rdquo;&trade;</em><br />
+    <em>AEGIS Initiative &mdash; Finnoybu IP LLC</em>
+  </p>
+</DocLayout>

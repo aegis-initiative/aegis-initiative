@@ -1,0 +1,248 @@
+---
+import DocLayout from "../../layouts/DocLayout.astro";
+---
+
+<DocLayout title="Projects" description="Detailed information on every public AEGIS project — versions, licenses, status, and links.">
+  <h1>Projects</h1>
+
+  <section>
+    <p>
+      Each project in the AEGIS ecosystem has a defined scope, dedicated
+      repository, and clear licensing terms. This page provides detailed
+      information on every public-facing component.
+    </p>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Constitution</h2>
+    <p>
+      The foundational governance charter for the AEGIS ecosystem. The
+      Constitution defines eleven articles covering bounded capability, authority
+      binding, deterministic enforcement, human oversight, information
+      sovereignty, governance transparency, auditability, collective defense,
+      deny-by-default operation, constitutional supremacy, and escalation
+      discipline. It is the root of authority — every governance decision traces
+      back to a constitutional article.
+    </p>
+    <dl class="project-facts">
+      <dt>Version</dt>
+      <dd>v26.03.22</dd>
+      <dt>License</dt>
+      <dd>Apache 2.0</dd>
+      <dt>Status</dt>
+      <dd>Published</dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://aegis-constitution.com" target="_blank" rel="noopener noreferrer">aegis-constitution.com</a></li>
+      <li><a href="https://github.com/aegis-initiative/aegis-constitution" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Governance</h2>
+    <p>
+      The technical specification layer. AEGIS Governance hosts the AGP-1
+      governance protocol, the ATX-1 threat matrix, the RFC process, and all
+      formal specifications that translate constitutional principles into
+      enforceable technical constraints. The ATX-1 taxonomy defines 10 tactics
+      and 29 techniques for classifying threats to agentic AI systems.
+    </p>
+    <dl class="project-facts">
+      <dt>Key Artifact</dt>
+      <dd>ATX-1 v2.1 (10 tactics, 29 techniques)</dd>
+      <dt>License</dt>
+      <dd>CC-BY-SA-4.0</dd>
+      <dt>Status</dt>
+      <dd>Published</dd>
+      <dt>DOI</dt>
+      <dd><a href="https://doi.org/10.5281/zenodo.19251098" target="_blank" rel="noopener noreferrer">10.5281/zenodo.19251098</a></dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://aegis-governance.com" target="_blank" rel="noopener noreferrer">aegis-governance.com</a></li>
+      <li><a href="https://github.com/aegis-initiative/aegis-governance" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Core</h2>
+    <p>
+      The canonical enforcement engine. aegis-core is a Python implementation
+      of AGP-1 that evaluates governance policies at runtime. It provides
+      deterministic policy evaluation, audit logging, and deny-by-default
+      enforcement for AI systems. The runtime is well-tested and designed
+      for production integration.
+    </p>
+    <dl class="project-facts">
+      <dt>Version</dt>
+      <dd>v0.1.2</dd>
+      <dt>Tests</dt>
+      <dd>403 passing</dd>
+      <dt>License</dt>
+      <dd>BSL 1.1</dd>
+      <dt>Status</dt>
+      <dd>Stable</dd>
+      <dt>DOI</dt>
+      <dd><a href="https://doi.org/10.5281/zenodo.19355478" target="_blank" rel="noopener noreferrer">10.5281/zenodo.19355478</a></dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://github.com/aegis-initiative/aegis-core" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Platform</h2>
+    <p>
+      The operator-facing product layer. AEGIS Platform provides a dashboard
+      for managing governance policies, an API surface for programmatic
+      integration, and monitoring tools for runtime enforcement. It consumes
+      aegis-core as its enforcement engine.
+    </p>
+    <dl class="project-facts">
+      <dt>Components</dt>
+      <dd>Operator dashboard, API surface</dd>
+      <dt>License</dt>
+      <dd>Proprietary</dd>
+      <dt>Status</dt>
+      <dd>In development</dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://aegis-platform.net" target="_blank" rel="noopener noreferrer">aegis-platform.net</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS SDK</h2>
+    <p>
+      Client libraries for integrating AEGIS governance into applications.
+      The SDK provides TypeScript and Python packages that handle authentication,
+      policy evaluation requests, and audit log submission against the AEGIS
+      Platform API.
+    </p>
+    <dl class="project-facts">
+      <dt>Languages</dt>
+      <dd>TypeScript &amp; Python</dd>
+      <dt>License</dt>
+      <dd>BSL 1.1</dd>
+      <dt>Status</dt>
+      <dd>Published</dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://github.com/aegis-initiative/aegis-sdk" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Docs</h2>
+    <p>
+      The public documentation site for the AEGIS ecosystem. Built with Astro,
+      it provides developer guides, integration tutorials, the ATX-1 threat
+      matrix browser, and technical reference for all AEGIS specifications
+      and tools.
+    </p>
+    <dl class="project-facts">
+      <dt>Framework</dt>
+      <dd>Astro</dd>
+      <dt>License</dt>
+      <dd>CC-BY-SA-4.0</dd>
+      <dt>Status</dt>
+      <dd>Live</dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://aegis-docs.com" target="_blank" rel="noopener noreferrer">aegis-docs.com</a></li>
+      <li><a href="https://github.com/aegis-initiative/aegis-docs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Federation</h2>
+    <p>
+      The cross-domain machine discovery protocol. AEGIS Federation defines how
+      AEGIS-governed systems discover and verify each other across organizational
+      boundaries. The protocol is specified in RFC-0016 and enables distributed
+      governance without centralized coordination.
+    </p>
+    <dl class="project-facts">
+      <dt>Key Artifact</dt>
+      <dd>RFC-0016</dd>
+      <dt>License</dt>
+      <dd>CC-BY-SA-4.0</dd>
+      <dt>Status</dt>
+      <dd>Published</dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://aegis-federation.com" target="_blank" rel="noopener noreferrer">aegis-federation.com</a></li>
+      <li><a href="https://github.com/aegis-initiative/aegis-federation" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="project">
+    <h2>AEGIS Labs</h2>
+    <p>
+      The research sandbox. AEGIS Labs hosts experiments, adversarial testing
+      scenarios, benchmark datasets, and exploratory work that informs the
+      development of governance specifications and enforcement tools. Results
+      from Labs feed into the formal RFC process.
+    </p>
+    <dl class="project-facts">
+      <dt>License</dt>
+      <dd>Apache 2.0</dd>
+      <dt>Status</dt>
+      <dd>Active</dd>
+    </dl>
+    <ul class="project-links">
+      <li><a href="https://github.com/aegis-initiative/aegis-labs" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </section>
+</DocLayout>
+
+<style>
+  .project-facts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.9375rem;
+  }
+
+  .project-facts dt {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .project-facts dd {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  .project-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-links a {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+</style>

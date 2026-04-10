@@ -1,15 +1,48 @@
 ---
 const pathname = Astro.url.pathname;
+const isLegal = pathname.startsWith('/legal');
+
+const legalNav = [
+  { label: 'Terms of Use', slug: 'legal/terms' },
+  { label: 'Privacy Policy', slug: 'legal/privacy' },
+  { label: 'Acceptable Use', slug: 'legal/acceptable-use' },
+  { label: 'Accessibility', slug: 'legal/accessibility' },
+  { label: 'Cookie Policy', slug: 'legal/cookies' },
+  { label: 'Disclaimer', slug: 'legal/disclaimer' },
+  { label: 'DMCA & Takedown', slug: 'legal/dmca' },
+  { label: 'Impressum', slug: 'legal/impressum' },
+];
 
 const nav = [
   { label: 'Home', slug: '' },
-  { label: 'About', slug: 'about' },
-  { label: 'Constitution', slug: 'constitution' },
   {
-    label: 'Policy & Research',
-    slug: 'policy',
+    label: 'About',
+    slug: 'about',
     items: [
-      { label: 'Overview', slug: 'policy' },
+      { label: 'Overview', slug: 'about' },
+      { label: 'Mission & Vision', slug: 'about/mission' },
+      { label: 'Team & Leadership', slug: 'about/team' },
+      { label: 'How We Work', slug: 'about/how-we-work' },
+      { label: 'Funding & Support', slug: 'about/funding' },
+    ],
+  },
+  {
+    label: 'Ecosystem',
+    slug: 'ecosystem',
+    items: [
+      { label: 'Overview', slug: 'ecosystem' },
+      { label: 'Projects', slug: 'ecosystem/projects' },
+      { label: 'Roadmap', slug: 'ecosystem/roadmap' },
+    ],
+  },
+  {
+    label: 'Research & Policy',
+    slug: 'research',
+    items: [
+      { label: 'Overview', slug: 'research' },
+      { label: 'Published Papers', slug: 'research/papers' },
+      { label: 'Standards Engagement', slug: 'research/standards' },
+      { label: 'Policy Positions', slug: 'research/policy' },
     ],
   },
   {
@@ -17,6 +50,9 @@ const nav = [
     slug: 'press',
     items: [
       { label: 'Overview', slug: 'press' },
+      { label: 'Publications & Releases', slug: 'press/publications' },
+      { label: 'Milestones', slug: 'press/milestones' },
+      { label: 'Media Kit', slug: 'press/media-kit' },
     ],
   },
   { label: 'Contact', slug: 'contact' },
@@ -38,33 +74,43 @@ function isGroupActive(group: any): boolean {
 
 <nav class="sidebar" id="sidebar" aria-label="Site navigation">
   <div class="sidebar-inner">
-    <ul class="nav-items">
-      {nav.map((item) => (
-        item.items ? (
+    {isLegal ? (
+      <ul class="nav-items">
+        {legalNav.map((item) => (
           <li>
-            <details class="nav-group" open={isGroupActive(item)}>
-              <summary class="nav-group-label">
-                <span>{item.label}</span>
-                <svg class="caret" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M6 9l6 6 6-6"/>
-                </svg>
-              </summary>
-              <ul class="nav-subitems">
-                {item.items.map((sub) => (
-                  <li>
-                    <a href={`/${sub.slug}/`} class={`nav-link ${isActive(sub.slug) ? 'active' : ''}`} aria-current={isActive(sub.slug) ? 'page' : undefined}>{sub.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </details>
+            <a href={`/${item.slug}/`} class={`nav-link ${isActive(item.slug) ? 'active' : ''}`} aria-current={isActive(item.slug) ? 'page' : undefined}>{item.label}</a>
           </li>
-        ) : (
-          <li>
-            <a href={item.slug === '' ? '/' : `/${item.slug}/`} class={`nav-link ${isActive(item.slug) ? 'active' : ''}`} aria-current={isActive(item.slug) ? 'page' : undefined}>{item.label}</a>
-          </li>
-        )
-      ))}
-    </ul>
+        ))}
+      </ul>
+    ) : (
+      <ul class="nav-items">
+        {nav.map((item) => (
+          item.items ? (
+            <li>
+              <details class="nav-group" open={isGroupActive(item)}>
+                <summary class="nav-group-label">
+                  <span>{item.label}</span>
+                  <svg class="caret" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6"/>
+                  </svg>
+                </summary>
+                <ul class="nav-subitems">
+                  {item.items.map((sub) => (
+                    <li>
+                      <a href={`/${sub.slug}/`} class={`nav-link ${isActive(sub.slug) ? 'active' : ''}`} aria-current={isActive(sub.slug) ? 'page' : undefined}>{sub.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          ) : (
+            <li>
+              <a href={item.slug === '' ? '/' : `/${item.slug}/`} class={`nav-link ${isActive(item.slug) ? 'active' : ''}`} aria-current={isActive(item.slug) ? 'page' : undefined}>{item.label}</a>
+            </li>
+          )
+        ))}
+      </ul>
+    )}
   </div>
 </nav>
 
