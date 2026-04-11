@@ -1,13 +1,13 @@
 {
   "name": "@aegis-initiative/design-system",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "AEGIS Initiative shared design tokens, CSS custom properties, and Astro components",
   "license": "Apache-2.0",
   "author": "Finnoybu IP LLC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aegis-initiative/aegis-initiative.git",
+    "url": "git+https://github.com/aegis-initiative/aegis-initiative.git",
     "directory": "packages/aegis-design-system"
   },
   "exports": {
@@ -26,7 +26,9 @@
     "./components/AegisLogo.astro": "./src/components/AegisLogo.astro",
     "./components/AegisWordmark.astro": "./src/components/AegisWordmark.astro",
     "./components/Breadcrumb.astro": "./src/components/Breadcrumb.astro",
-    "./components/PrevNext.astro": "./src/components/PrevNext.astro"
+    "./components/PrevNext.astro": "./src/components/PrevNext.astro",
+    "./components/Header.astro": "./src/components/Header.astro",
+    "./components/Search.astro": "./src/components/Search.astro"
   },
   "files": [
     "src/"
@@ -38,10 +40,14 @@
     "astro-components"
   ],
   "peerDependencies": {
-    "astro": ">=5.0.0"
+    "astro": ">=5.0.0",
+    "@pagefind/default-ui": ">=1.0.0"
   },
   "peerDependenciesMeta": {
     "astro": {
+      "optional": true
+    },
+    "@pagefind/default-ui": {
       "optional": true
     }
   },

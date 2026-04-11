@@ -118,6 +118,16 @@ import PrevNext from '@aegis-initiative/design-system/components/PrevNext.astro'
 | `Breadcrumb` | `items: {label, href?}[]`, `homeLabel?: string`, `homeHref?: string` | Navigation breadcrumbs |
 | `PrevNext` | `prev?: {label, href}`, `next?: {label, href}` | Previous/next page navigation |
 
+## CSS Class Convention
+
+Components use **unprefixed class names** (e.g., `.aside`, `.breadcrumb`, `.prev-next`) rather than
+`aegis-` prefixed names. These components are consumed exclusively inside AEGIS Astro sites, which
+use Astro's scoped styles. Namespace collisions are not a practical risk, and unprefixed classes
+avoid migration friction for existing consumers.
+
+If a component's CSS must be global (e.g., Search.astro overriding Pagefind UI), it uses element-id
+specificity (`#aegis__search`) rather than class-name prefixing.
+
 ## Font Files
 
 This package does **not** ship font files. Copy the WOFF2 files from any existing AEGIS site's `public/fonts/` directory into your own `public/fonts/`:

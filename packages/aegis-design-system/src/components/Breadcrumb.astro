@@ -16,14 +16,14 @@ interface Props {
 const { items, homeLabel = "AEGIS", homeHref = "/" } = Astro.props;
 ---
 
-<nav class="aegis-breadcrumb" aria-label="Breadcrumb">
-  <ol class="aegis-breadcrumb-list">
-    <li class="aegis-breadcrumb-item aegis-breadcrumb-home">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item breadcrumb-home">
       <a href={homeHref}>{homeLabel}</a>
     </li>
     {items.map((item, i) => (
-      <li class="aegis-breadcrumb-item">
-        <svg class="aegis-breadcrumb-sep" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <li class="breadcrumb-item">
+        <svg class="breadcrumb-sep" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M9 18l6-6-6-6"/>
         </svg>
         {item.href && i < items.length - 1 ? (
@@ -37,13 +37,13 @@ const { items, homeLabel = "AEGIS", homeHref = "/" } = Astro.props;
 </nav>
 
 <style>
-  .aegis-breadcrumb {
+  .breadcrumb {
     background-color: var(--color-bg);
     color: var(--color-text-muted);
     padding: 0.75rem 1.5rem 0;
   }
 
-  .aegis-breadcrumb-list {
+  .breadcrumb-list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -53,7 +53,7 @@ const { items, homeLabel = "AEGIS", homeHref = "/" } = Astro.props;
     padding: 0;
   }
 
-  .aegis-breadcrumb-item {
+  .breadcrumb-item {
     display: flex;
     align-items: center;
     font-family: "IBM Plex Sans", system-ui, sans-serif;
@@ -62,41 +62,41 @@ const { items, homeLabel = "AEGIS", homeHref = "/" } = Astro.props;
     letter-spacing: 0.02em;
   }
 
-  .aegis-breadcrumb-item a {
+  .breadcrumb-item a {
     color: var(--color-text-muted);
     text-decoration: none;
     transition: color 0.15s;
   }
 
-  .aegis-breadcrumb-item a:hover {
+  .breadcrumb-item a:hover {
     color: var(--color-accent);
     text-decoration: underline;
   }
 
-  .aegis-breadcrumb-item span {
+  .breadcrumb-item span {
     color: var(--color-text);
     font-weight: 600;
   }
 
-  .aegis-breadcrumb-sep {
+  .breadcrumb-sep {
     margin: 0 0.375rem;
     color: var(--color-text-muted);
     flex-shrink: 0;
   }
 
-  .aegis-breadcrumb-home {
+  .breadcrumb-home {
     display: none;
   }
 
-  .aegis-breadcrumb-home + .aegis-breadcrumb-item .aegis-breadcrumb-sep {
+  .breadcrumb-home + .breadcrumb-item .breadcrumb-sep {
     display: none;
   }
 
   @media (min-width: 560px) {
-    .aegis-breadcrumb-home {
+    .breadcrumb-home {
       display: flex;
     }
-    .aegis-breadcrumb-home + .aegis-breadcrumb-item .aegis-breadcrumb-sep {
+    .breadcrumb-home + .breadcrumb-item .breadcrumb-sep {
       display: inline;
     }
   }

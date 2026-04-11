@@ -7,7 +7,9 @@ export const components = [
   "AegisLogo",
   "AegisWordmark",
   "Breadcrumb",
+  "Header",
   "PrevNext",
+  "Search",
 ] as const;
 
 export type ComponentName = (typeof components)[number];
