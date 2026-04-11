@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { size = 32 } = Astro.props;
+// Original aspect ratio: 443.721 / 478.328 (nearly square)
 const width = Math.round(size * (443.721 / 478.328));
 ---
 

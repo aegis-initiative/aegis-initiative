@@ -5,6 +5,7 @@ interface Props {
 }
 
 const props = Astro.props;
+// Original viewBox aspect ratio: 450.101 / 645.785
 const aspectRatio = 450.101 / 645.785;
 const width = props.width ?? Math.round((props.height ?? 32) * aspectRatio);
 const height = props.height ?? Math.round(width / aspectRatio);
