@@ -11,7 +11,11 @@
     "tamper-evident", "exfiltration", "wordmark", "wordmarks",
     "ibmplexsans", "variablefont", "wdthwght",
     "lightitalic", "mediumitalic", "semibolditalic",
-    "FOUC"
+    "FOUC",
+    "DALL", "WCAG", "Sturrock", "Univers",
+    "aegisinitiative", "aegissystems",
+    "frontmatter", "grayscale", "headshots",
+    "letterforms", "rgba", "sandboxing", "wght"
   ],
   "ignorePaths": [
     "node_modules/**",
