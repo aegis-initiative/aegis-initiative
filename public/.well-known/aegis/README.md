@@ -37,7 +37,7 @@ boundaries without centralized control. Threat patterns detected by one deployme
 | Site | Purpose | URL |
 |---|---|---|
 | AEGIS Initiative | Organization home (you are here) | <https://aegis-initiative.com> |
-| AEGIS Constitution | The governance charter — eight articles defining what compliant AI governance requires | <https://aegis-constitution.com> |
+| AEGIS Constitution | The governance charter — eleven articles defining what compliant AI governance requires | <https://aegis-constitution.com> |
 | AEGIS Documentation | Human-readable specs, guides, and architecture docs | <https://aegis-docs.com> |
 | AEGIS Governance Data | Machine-readable governance artifacts, schemas, STIX bundles (coming soon) | <https://aegis-governance.com> |
 | AEGIS Federation | The Governance Federation Network — decentralized governance intelligence sharing | <https://aegis-federation.com> |

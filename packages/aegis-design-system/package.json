@@ -1,6 +1,6 @@
 {
   "name": "@aegis-initiative/design-system",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "description": "AEGIS Initiative shared design tokens, CSS custom properties, and Astro components",
   "license": "Apache-2.0",
@@ -27,6 +27,7 @@
     "./components/AegisWordmark.astro": "./src/components/AegisWordmark.astro",
     "./components/Breadcrumb.astro": "./src/components/Breadcrumb.astro",
     "./components/PrevNext.astro": "./src/components/PrevNext.astro",
+    "./components/Footer.astro": "./src/components/Footer.astro",
     "./components/Header.astro": "./src/components/Header.astro",
     "./components/Search.astro": "./src/components/Search.astro"
   },
