@@ -7,6 +7,7 @@ export const components = [
   "AegisLogo",
   "AegisWordmark",
   "Breadcrumb",
+  "Footer",
   "Header",
   "PrevNext",
   "Search",
