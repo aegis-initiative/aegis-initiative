@@ -1,17 +1,28 @@
 ---
 interface Props {
-  /** Use local paths for About/Contact/Legal links (e.g., constitution site has its own legal pages) */
+  /**
+   * Use local paths for About, Contact, and Legal links.
+   * Set to true on aegis-initiative.com (the canonical source).
+   * Leave false on other sites to link back to aegis-initiative.com.
+   */
   localLinks?: boolean;
+  /** Override the About link href (e.g., local /about/ on a site that has its own About page). */
+  aboutHref?: string;
+  /** Override the Contact link href. */
+  contactHref?: string;
+  /** Override the Legal link href. */
+  legalHref?: string;
 }
 
-const { localLinks = false } = Astro.props;
+const props = Astro.props;
+const localLinks = props.localLinks ?? false;
 
 const year = new Date().getFullYear();
 const buildDate = new Date().toISOString().slice(0, 10).replace(/-/g, '.');
 
-const aboutHref = localLinks ? '/about/' : 'https://aegis-initiative.com/about/';
-const contactHref = localLinks ? '/contact/' : 'https://aegis-initiative.com/contact/';
-const legalHref = localLinks ? '/legal/' : 'https://aegis-initiative.com/legal/';
+const aboutHref = props.aboutHref ?? (localLinks ? '/about/' : 'https://aegis-initiative.com/about/');
+const contactHref = props.contactHref ?? (localLinks ? '/contact/' : 'https://aegis-initiative.com/contact/');
+const legalHref = props.legalHref ?? (localLinks ? '/legal/' : 'https://aegis-initiative.com/legal/');
 ---
 
 <footer class="site-footer">
