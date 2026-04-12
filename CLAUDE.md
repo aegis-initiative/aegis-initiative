@@ -12,8 +12,8 @@ work to the right place.
 ## Org Context
 
 - GitHub Org: github.com/aegis-initiative
-- IP Owner: Finnoybu IP LLC
-- Parent Ecosystem: Finnoybu Holdings LLC
+- Operating Entity: AEGIS Operations LLC
+- Trademark Owner: Finnoybu IP LLC
 - Website: aegis-initiative.com
 - Governance Domain: aegis-platform.net
 
