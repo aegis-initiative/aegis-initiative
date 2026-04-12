@@ -2,71 +2,235 @@
 import DocLayout from "../layouts/DocLayout.astro";
 ---
 
-<DocLayout title="Contact" description="Get in touch with the AEGIS Initiative — general inquiries, press, and policy engagement.">
+<DocLayout title="Contact" description="Get in touch with the AEGIS Initiative — general inquiries, press, research, policy, partnerships, security, and legal.">
   <h1>Contact</h1>
 
-  <p>
+  <p class="intro">
     The AEGIS Initiative welcomes inquiries from policymakers, researchers,
-    journalists, and anyone interested in governance-first AI security.
+    journalists, developers, security practitioners, and organizations
+    interested in governance-first AI security. Use the contact below that
+    best matches your inquiry — we respond to every message.
   </p>
 
   <hr />
 
-  <section>
-    <h2>General Contact</h2>
-    <p>
-      For general inquiries about the AEGIS Initiative, its publications, or
-      its governance framework:
-    </p>
-    <p>
-      <strong>Email:</strong> <a href="mailto:contact@aegis-initiative.com">contact@aegis-initiative.com</a>
-    </p>
-  </section>
+  <div class="contact-grid">
+    <section class="contact-card">
+      <h2>General Inquiries</h2>
+      <p>
+        Questions about the AEGIS Initiative, its mission, or how to get involved —
+        if you're not sure which contact fits, this is the right one.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:contact@aegis-initiative.com">contact@aegis-initiative.com</a>
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <h2>Press &amp; Media</h2>
+      <p>
+        Press inquiries, interview requests, embargoed releases, and media access
+        to brand assets and press-ready materials.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:press@aegis-initiative.com">press@aegis-initiative.com</a>
+      </p>
+      <p class="contact-link">
+        <a href="/press/">Press section &rarr;</a>
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <h2>Research &amp; Academic</h2>
+      <p>
+        Academic collaboration, citation requests, peer review, reproducibility
+        questions about published specifications, and research partnerships.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:research@aegis-initiative.com">research@aegis-initiative.com</a>
+      </p>
+      <p class="contact-link">
+        <a href="/research/">Research &amp; Policy &rarr;</a>
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <h2>Policy &amp; Standards</h2>
+      <p>
+        Standards body engagement (NIST, IEEE, NCCoE), regulatory consultation,
+        legislative testimony, and invitations to submit public comments.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:policy@aegis-initiative.com">policy@aegis-initiative.com</a>
+      </p>
+      <p class="contact-link">
+        <a href="/research/standards/">Standards Engagement &rarr;</a>
+      </p>
+    </section>
+
+    <section class="contact-card contact-card-featured">
+      <h2>Partnerships &amp; Sponsorship</h2>
+      <p>
+        Corporate sponsors, partnership proposals, grant applications, and
+        institutional funding inquiries. AEGIS is privately funded and actively
+        seeking support to sustain governance research and open-source development.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:partners@aegis-initiative.com">partners@aegis-initiative.com</a>
+      </p>
+      <p class="contact-link">
+        <a href="/about/funding/">Funding &amp; Support &rarr;</a>
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <h2>Security Disclosure</h2>
+      <p>
+        Responsible disclosure of vulnerabilities in AEGIS specifications,
+        reference implementations, or ecosystem sites. Please report privately
+        before public disclosure.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:security@aegis-initiative.com">security@aegis-initiative.com</a>
+      </p>
+      <p class="contact-note">
+        PGP keys and coordinated disclosure timeline available on request.
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <h2>Legal &amp; Trademark</h2>
+      <p>
+        Trademark permission requests, licensing questions, DMCA notices, and
+        other legal inquiries.
+      </p>
+      <p class="contact-email">
+        <a href="mailto:legal@aegis-initiative.com">legal@aegis-initiative.com</a>
+      </p>
+      <p class="contact-link">
+        <a href="/legal/">Legal &rarr;</a>
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <h2>GitHub &amp; Open Source</h2>
+      <p>
+        Bug reports, feature requests, technical discussions, and contributions
+        to any AEGIS specification or reference implementation.
+      </p>
+      <p class="contact-email">
+        <a href="https://github.com/aegis-initiative" target="_blank" rel="noopener noreferrer">github.com/aegis-initiative</a>
+      </p>
+      <p class="contact-note">
+        Open an issue or discussion on the relevant repository.
+      </p>
+    </section>
+  </div>
 
   <hr />
 
   <section>
-    <h2>Press Inquiries</h2>
+    <h2>Mailing Address</h2>
     <p>
-      For press inquiries, interview requests, or media access to brand assets
-      and press-ready materials:
-    </p>
-    <p>
-      <strong>Email:</strong> <a href="mailto:press@aegis-initiative.com">press@aegis-initiative.com</a>
-    </p>
-    <p>
-      See the <a href="/press/">Press</a> section for published articles, press
-      releases, and the media kit.
-    </p>
-  </section>
-
-  <hr />
-
-  <section>
-    <h2>Policy Engagement</h2>
-    <p>
-      For collaboration on policy research, standards body engagement, or
-      academic partnerships:
-    </p>
-    <p>
-      <strong>Email:</strong> <a href="mailto:policy@aegis-initiative.com">policy@aegis-initiative.com</a>
-    </p>
-    <p>
-      AEGIS engages with standards bodies (NIST, IEEE), regulatory agencies,
-      legislative offices, and academic institutions. We welcome invitations to
-      submit public comments, provide testimony, or collaborate on governance
-      research.
-    </p>
-  </section>
-
-  <hr />
-
-  <section>
-    <h2>GitHub</h2>
-    <p>
-      All AEGIS specifications and source code are maintained on GitHub under
-      the <a href="https://github.com/aegis-initiative">aegis-initiative</a>
-      organization. Issues and discussions are welcome on any public repository.
+      For legal or formal correspondence, see the
+      <a href="/legal/impressum/">Impressum</a> for our mailing address and
+      full corporate structure.
     </p>
   </section>
 </DocLayout>
+
+<style>
+  .intro {
+    font-size: 1.0625rem;
+    max-width: 42rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  @media (min-width: 720px) {
+    .contact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-bg);
+    transition: border-color 0.15s;
+  }
+
+  .contact-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .contact-card-featured {
+    background-color: var(--color-accent-low);
+    border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  }
+
+  .contact-card h2 {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--color-accent);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-email {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    margin-top: auto;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .contact-email a {
+    color: var(--color-accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+
+  .contact-email a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-link {
+    font-size: 0.8125rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .contact-link a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+  }
+
+  .contact-link a:hover {
+    color: var(--color-accent);
+  }
+
+  .contact-note {
+    font-size: 0.8125rem !important;
+    color: var(--color-text-muted) !important;
+    font-style: italic;
+    margin-bottom: 0 !important;
+  }
+</style>
