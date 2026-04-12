@@ -1,7 +1,40 @@
 # AEGIS Component Library
 
-> Catalog of shared Astro components from the AEGIS constitution site.
-> Source: `aegis-constitution/src/components/`
+> Catalog of shared Astro components in the AEGIS design system.
+> Source: [`packages/aegis-design-system/src/components/`](../packages/aegis-design-system/src/components/)
+
+Components are published as part of the [`@aegis-initiative/design-system`][package]
+package and consumed by all AEGIS sites via direct path imports:
+
+```astro
+---
+import Aside from '@aegis-initiative/design-system/components/Aside.astro';
+import AegisLogo from '@aegis-initiative/design-system/components/AegisLogo.astro';
+---
+```
+
+For installation, CSS imports, and package-level docs, see the
+[package README](../packages/aegis-design-system/README.md).
+
+[package]: ../packages/aegis-design-system/
+
+## Components at a glance
+
+| Component | Package | Purpose |
+|-----------|---------|---------|
+| [`Aside`](#aside) | ✓ | Contextual callout box (doctrine/application/constraint/prohibition) |
+| [`Breadcrumb`](#breadcrumb) | ✓ | Horizontal breadcrumb navigation |
+| [`PrevNext`](#prevnext) | ✓ | Sequential page navigation (previous/next cards) |
+| [`AegisLogo`](#aegislogo) | ✓ | Inline SVG shield+diamond mark |
+| [`AegisWordmark`](#aegiswordmark) | ✓ | Inline SVG wordmark (logo + "AEGIS" text) |
+| [`Header`](#header) | ✓ | Site header chrome (logo, search, theme toggle) |
+| [`Footer`](#footer) | ✓ | Site footer (author, copyright, legal links) |
+| [`Search`](#search) | ✓ | Full-text site search powered by Pagefind |
+| [`TableOfContents`](#tableofcontents) | — | Rail + dropdown "On this page" navigation (per-site, see #7) |
+
+The detailed sections below document the components in depth. `Header`, `Footer`,
+and `Search` were added to the package after the initial audit and are
+documented in the [package README](../packages/aegis-design-system/README.md).
 
 ---
 
@@ -30,7 +63,7 @@ types.
 
 ```astro
 ---
-import Aside from '../components/Aside.astro';
+import Aside from '@aegis-initiative/design-system/components/Aside.astro';
 ---
 
 <Aside type="doctrine">
@@ -42,17 +75,14 @@ import Aside from '../components/Aside.astro';
 </Aside>
 ```
 
-### Sites Using This Component
-
-- aegis-constitution
 
 ---
 
 ## Breadcrumb
 
-Horizontal breadcrumb navigation bar. Displays "AEGIS Constitution"
-as the home root (hidden on mobile) followed by a configurable trail
-of links. The current page (last item) renders as plain text with
+Horizontal breadcrumb navigation bar. Displays a configurable home
+label (hidden on mobile) followed by a configurable trail of links.
+The current page (last item) renders as plain text with
 `aria-current="page"`.
 
 ### Props
@@ -72,7 +102,7 @@ of links. The current page (last item) renders as plain text with
 
 ```astro
 ---
-import Breadcrumb from '../components/Breadcrumb.astro';
+import Breadcrumb from '@aegis-initiative/design-system/components/Breadcrumb.astro';
 ---
 
 <Breadcrumb items={[
@@ -83,14 +113,11 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
 ### Behavior
 
-- Home link ("AEGIS Constitution") is hardcoded and always first
+- Home link label and href are configurable via `homeLabel` and `homeHref` props
 - Home link hidden below 560px to save space
 - Chevron separators rendered as inline SVGs
 - Last item renders as `<span>` (not a link)
 
-### Sites Using This Component
-
-- aegis-constitution
 
 ---
 
@@ -117,7 +144,7 @@ Renders as two cards (Previous / Next) with directional chevron icons.
 
 ```astro
 ---
-import PrevNext from '../components/PrevNext.astro';
+import PrevNext from '@aegis-initiative/design-system/components/PrevNext.astro';
 ---
 
 <PrevNext
@@ -134,9 +161,6 @@ import PrevNext from '../components/PrevNext.astro';
 - Hover state: accent border + accent-low background
 - Focus state: 2px accent outline
 
-### Sites Using This Component
-
-- aegis-constitution
 
 ---
 
@@ -157,7 +181,7 @@ searches panel with local storage persistence.
 
 ```astro
 ---
-import Search from '../components/Search.astro';
+import Search from '@aegis-initiative/design-system/components/Search.astro';
 ---
 
 <Search placeholder="Search the constitution..." />
@@ -180,9 +204,6 @@ import Search from '../components/Search.astro';
 - `@pagefind/default-ui` (CSS imported in frontmatter)
 - Pagefind index built at `/pagefind/` during site build
 
-### Sites Using This Component
-
-- aegis-constitution
 
 ---
 
@@ -207,6 +228,11 @@ import TableOfContents from '../components/TableOfContents.astro';
 <TableOfContents />
 ```
 
+> **Note:** `TableOfContents` is not yet part of the design system package —
+> each site currently maintains its own copy in `src/components/`. Migration
+> to the shared package is tracked in
+> [aegis-initiative#7](https://github.com/aegis-initiative/aegis-initiative/issues/7).
+
 ### Behavior
 
 - **Rail mode** (1367px+): Fixed right sidebar, 320px wide. Vertical
@@ -220,9 +246,6 @@ import TableOfContents from '../components/TableOfContents.astro';
 - **Click behavior:** Scrolls to the HR above the heading (if present), accounting for fixed header height
 - H3 headings are indented with smaller font size
 
-### Sites Using This Component
-
-- aegis-constitution
 
 ---
 
@@ -248,15 +271,12 @@ light/dark themes.
 
 ```astro
 ---
-import AegisLogo from '../components/AegisLogo.astro';
+import AegisLogo from '@aegis-initiative/design-system/components/AegisLogo.astro';
 ---
 
 <AegisLogo size={48} />
 ```
 
-### Sites Using This Component
-
-- aegis-constitution
 
 ---
 
@@ -284,7 +304,7 @@ theme adaptation.
 
 ```astro
 ---
-import AegisWordmark from '../components/AegisWordmark.astro';
+import AegisWordmark from '@aegis-initiative/design-system/components/AegisWordmark.astro';
 ---
 
 <!-- Footer watermark -->
@@ -294,6 +314,3 @@ import AegisWordmark from '../components/AegisWordmark.astro';
 <AegisWordmark height={28} />
 ```
 
-### Sites Using This Component
-
-- aegis-constitution (footer watermark at 720px height, 8% opacity, grayscale)

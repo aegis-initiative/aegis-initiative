@@ -1,7 +1,24 @@
 # AEGIS Design Tokens
 
-> Single source of truth for all AEGIS visual design.
-> Extracted from the constitution site CSS (`DocLayout.astro`) and the official branding kit.
+> Source of truth for all AEGIS visual design token values and their rationale.
+
+This document specifies the design tokens that define the AEGIS visual system.
+The values here are implemented in the [`@aegis-initiative/design-system`][package]
+package — any change to a token value should be made in this document first,
+then reflected in the package files:
+
+- CSS custom properties: [`packages/aegis-design-system/src/css/tokens.css`][tokens-css]
+- JS/TS constants: [`packages/aegis-design-system/src/tokens/`][tokens-ts]
+- Font face declarations: [`packages/aegis-design-system/src/css/fonts.css`][fonts-css]
+
+When consuming tokens in an AEGIS site, always use the CSS custom properties
+(`var(--color-accent)`) or the TypeScript constants, **not** the raw hex values
+in this document. The raw values are for reference and rationale only.
+
+[package]: ../packages/aegis-design-system/
+[tokens-css]: ../packages/aegis-design-system/src/css/tokens.css
+[tokens-ts]: ../packages/aegis-design-system/src/tokens/
+[fonts-css]: ../packages/aegis-design-system/src/css/fonts.css
 
 ---
 

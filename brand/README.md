@@ -1,50 +1,83 @@
-# Brand Assets
+# Brand Assets & Design System
 
-This directory houses the AEGIS Initiative's design system and brand identity.
+This directory documents the AEGIS Initiative's brand identity and design decisions.
+The design system is implemented in the [`@aegis-initiative/design-system`][package]
+package at [`packages/aegis-design-system/`][package-path].
 
-## Planned Contents
+[package]: https://github.com/aegis-initiative/aegis-initiative/tree/main/packages/aegis-design-system
+[package-path]: ../packages/aegis-design-system/
 
-### Brand Guidelines
+## Where things live
 
-- Logo usage rules, clear space, minimum sizes
-- Color palette (primary, secondary, semantic)
-- Typography (headings, body, code)
-- Voice and tone guide
+**This directory (`brand/`)** — design *decisions* and *rationale*:
 
-### Logos & Marks
+- [`brand-guide.md`](brand-guide.md) — Trademark usage, logo clear space, permitted marks
+- [`design-tokens.md`](design-tokens.md) — Token values and the rationale behind each choice
+- [`component-library.md`](component-library.md) — Component catalog and usage patterns
 
-- AEGIS wordmark (SVG, PNG — light/dark variants)
-- AEGIS icon mark
-- Org avatar
-- Favicon set
+**Package (`packages/aegis-design-system/`)** — design *implementation*:
 
-### UI Kit
+- `src/css/tokens.css` — CSS custom properties (light + dark theme)
+- `src/css/reset.css` — Base reset + typography
+- `src/css/fonts.css` — `@font-face` declarations
+- `src/tokens/` — JS/TS token constants (colors, typography, spacing, breakpoints, surfaces)
+- `src/components/` — Reusable Astro components
 
-- Component library specifications
-- Design tokens (colors, spacing, typography as JSON/YAML)
-- Dark and light theme definitions
+The brand documents are the source of truth for *what* and *why*; the package is the
+source of truth for *how*. When they conflict, update the package to match the
+brand docs, then bump the package version.
 
-### Media Kit
+## Consuming the design system
 
-- Press-ready images and logos
-- Approved headshots and team photos
-- Social media assets and templates
-- Press contact information
+Sites inside this monorepo consume the package directly:
 
-### Templates
+```json
+{
+  "dependencies": {
+    "@aegis-initiative/design-system": "file:../aegis-initiative/packages/aegis-design-system"
+  }
+}
+```
 
-- Presentation templates
-- Social media post templates
-- Document and letterhead templates
+Once published to a registry, external consumers can install via:
+
+```bash
+npm install @aegis-initiative/design-system
+```
+
+Import CSS in your layout:
+
+```css
+@import '@aegis-initiative/design-system/css/fonts.css';
+@import '@aegis-initiative/design-system/css/tokens.css';
+@import '@aegis-initiative/design-system/css/reset.css';
+```
+
+Import components directly by path:
+
+```astro
+---
+import AegisLogo from '@aegis-initiative/design-system/components/AegisLogo.astro';
+import Aside from '@aegis-initiative/design-system/components/Aside.astro';
+---
+```
+
+For full consumer documentation, see the [package README][package-readme].
+
+[package-readme]: ../packages/aegis-design-system/README.md
+
+## Contributing
+
+To change a token or component:
+
+1. Update the rationale in the relevant `brand/*.md` file
+2. Update the implementation in `packages/aegis-design-system/src/`
+3. Bump the package version in `packages/aegis-design-system/package.json`
+4. Open a PR referencing both changes
 
 ## Usage
 
-All AEGIS brand assets are proprietary to **Finnoybu IP LLC**. Use of AEGIS™ marks, logos, or brand elements in
-derivative works requires explicit written permission.
-
-See the org-level [LICENSE](../LICENSE) and trademark notice in the [README](../README.md) for full terms.
-
-## Status
-
-This directory is in **scaffolding** phase. Assets will be added as the brand system is formalized. For current logo
-assets, see [`../assets/`](../assets/).
+All AEGIS brand assets are proprietary to **Finnoybu IP LLC**. Use of AEGIS™ marks,
+logos, or brand elements in derivative works requires explicit written permission.
+See [`brand-guide.md`](brand-guide.md) for trademark rules and the org-level
+[LICENSE](../LICENSE) for full terms.
