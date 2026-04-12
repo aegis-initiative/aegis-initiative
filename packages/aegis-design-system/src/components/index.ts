@@ -11,6 +11,7 @@ export const components = [
   "Header",
   "PrevNext",
   "Search",
+  "TableOfContents",
 ] as const;
 
 export type ComponentName = (typeof components)[number];
