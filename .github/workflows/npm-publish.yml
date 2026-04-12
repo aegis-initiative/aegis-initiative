@@ -41,14 +41,18 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-      # npm OIDC trusted publishing requires npm CLI v11.5.0+.
-      # Node 22 LTS ships with npm 10.9.x, which only supports
-      # `--provenance` for Sigstore attestation — it does not know
-      # how to exchange an OIDC token for a scoped publish token
-      # at registry.npmjs.org. Upgrading to the latest npm CLI
-      # unlocks the full trusted publishing path.
-      - run: npm install -g npm@latest
+          # Node 24 ships with npm 11.x natively, which supports OIDC
+          # trusted publishing. Node 22 LTS only ships npm 10.9.x,
+          # which handles `--provenance` for Sigstore attestation but
+          # does NOT know how to exchange an OIDC token for a scoped
+          # publish token at registry.npmjs.org. That's a strict
+          # version gap, not a config issue, so we need npm 11+.
+          #
+          # Self-upgrading via `npm install -g npm@latest` fails mid-
+          # install with MODULE_NOT_FOUND (npm overwrites its own
+          # files while running), so using a Node version that ships
+          # the right npm is the clean path.
+          node-version: 24
       # No `registry-url` on setup-node: that action writes an .npmrc
       # template with `//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}`,
       # and the presence of an auth line — even an empty one — makes
