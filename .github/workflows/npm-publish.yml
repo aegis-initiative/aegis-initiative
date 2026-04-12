@@ -1,5 +1,29 @@
 name: Publish Design System
 
+# Publishes @aegis-initiative/design-system to npm when a
+# `design-system-v*` tag is pushed.
+#
+# Authentication: OIDC trusted publishing. No npm token required.
+# The `id-token: write` permission lets GitHub Actions mint a
+# short-lived OIDC token which `npm publish --provenance` exchanges
+# for a scoped publish token at registry.npmjs.org. Provenance
+# attestations are signed with the repo identity and show up on the
+# package page.
+#
+# Prerequisites (one-time setup on npmjs.com):
+#
+#   1. Log into npmjs.com as an owner of @aegis-initiative/design-system
+#   2. Package page → Settings → Publishing Access → Trusted Publisher
+#   3. Add a GitHub Actions trusted publisher with:
+#        Organization:   aegis-initiative
+#        Repository:     aegis-initiative
+#        Workflow:       .github/workflows/npm-publish.yml
+#        Environment:    npm-publish
+#
+# If that configuration isn't in place, `npm publish` will fall
+# through to token auth, fail with ENEEDAUTH, and the workflow run
+# will error out.
+
 on:
   push:
     tags:
@@ -21,5 +45,3 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm publish --access public --provenance
         working-directory: packages/aegis-design-system
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_CONFIG_TOKEN }}
