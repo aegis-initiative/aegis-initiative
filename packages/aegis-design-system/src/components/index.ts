@@ -11,6 +11,7 @@ export const components = [
   "Header",
   "PrevNext",
   "Search",
+  "Sidebar",
   "TableOfContents",
 ] as const;
 

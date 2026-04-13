@@ -44,11 +44,11 @@ const { items, homeLabel = "AEGIS", homeHref = "/" } = Astro.props;
   }
 
   /* Align breadcrumb content with the main content area on desktop, clearing
-     the fixed sidebar. The sidebar width is consistent across AEGIS sites at
-     280px; the extra 2rem matches the main-content padding. */
+     the fixed sidebar. The sidebar width is standardized across AEGIS sites
+     at 320px; the extra 2rem matches the main-content padding. */
   @media (min-width: 1024px) {
     .breadcrumb {
-      padding-left: calc(280px + 2rem);
+      padding-left: calc(320px + 2rem);
     }
   }
 
