@@ -1,6 +1,6 @@
 {
   "name": "@aegis-initiative/design-system",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "type": "module",
   "description": "AEGIS Initiative shared design tokens, CSS custom properties, and Astro components",
   "license": "Apache-2.0",
@@ -31,7 +31,8 @@
     "./components/Footer.astro": "./src/components/Footer.astro",
     "./components/Header.astro": "./src/components/Header.astro",
     "./components/Search.astro": "./src/components/Search.astro",
-    "./components/TableOfContents.astro": "./src/components/TableOfContents.astro"
+    "./components/TableOfContents.astro": "./src/components/TableOfContents.astro",
+    "./components/Sidebar.astro": "./src/components/Sidebar.astro"
   },
   "files": [
     "src/"
