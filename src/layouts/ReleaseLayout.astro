@@ -1,0 +1,25 @@
+---
+/**
+ * Layout for release notes Markdown pages.
+ *
+ * Astro automatically passes the parsed frontmatter as `frontmatter` when
+ * a .md page declares this file in its `layout:` field. We forward
+ * `frontmatter.title` and `frontmatter.description` to the standard
+ * DocLayout so release notes get the same chrome (header, sidebar,
+ * footer, breadcrumbs, ToC) as every other documentation page.
+ */
+import DocLayout from "./DocLayout.astro";
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<DocLayout title={frontmatter.title} description={frontmatter.description}>
+  <slot />
+</DocLayout>
