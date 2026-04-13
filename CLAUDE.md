@@ -13,7 +13,7 @@ work to the right place.
 
 - GitHub Org: github.com/aegis-initiative
 - Operating Entity: AEGIS Operations LLC
-- Trademark Owner: Finnoybu IP LLC
+- Trademark Owner: AEGIS Initiative
 - Website: aegis-initiative.com
 - Governance Domain: aegis-platform.net
 
