@@ -442,20 +442,23 @@ import Aside from '@aegis-initiative/design-system/components/Aside.astro';`}</c
 
   <p>Sequential page navigation, typically rendered at the bottom of long-form content. Stacks vertically on mobile, horizontal on desktop (1024px+).</p>
 
-  <p><strong>Both prev and next:</strong></p>
+  <div class="prevnext-variant">
+    <p class="variant-label"><strong>Both prev and next:</strong></p>
+    <PrevNext
+      prev={{ label: "Mission & Vision", href: "/about/mission/" }}
+      next={{ label: "How We Work", href: "/about/how-we-work/" }}
+    />
+  </div>
 
-  <PrevNext
-    prev={{ label: "Mission & Vision", href: "/about/mission/" }}
-    next={{ label: "How We Work", href: "/about/how-we-work/" }}
-  />
+  <div class="prevnext-variant">
+    <p class="variant-label"><strong>Next only:</strong></p>
+    <PrevNext next={{ label: "First page", href: "/about/" }} />
+  </div>
 
-  <p><strong>Next only:</strong></p>
-
-  <PrevNext next={{ label: "First page", href: "/about/" }} />
-
-  <p><strong>Prev only:</strong></p>
-
-  <PrevNext prev={{ label: "Last previous page", href: "/about/funding/" }} />
+  <div class="prevnext-variant">
+    <p class="variant-label"><strong>Prev only:</strong></p>
+    <PrevNext prev={{ label: "Last previous page", href: "/about/funding/" }} />
+  </div>
 
   <pre><code>{`<PrevNext
   prev={{ label: "Mission", href: "/about/mission/" }}
@@ -526,6 +529,18 @@ import Aside from '@aegis-initiative/design-system/components/Aside.astro';`}</c
 </DocLayout>
 
 <style>
+  h2 {
+    margin-top: 3rem;
+  }
+
+  h3 {
+    margin-top: 2.25rem;
+  }
+
+  hr {
+    margin: 3rem 0;
+  }
+
   .lede {
     font-size: 1.0625rem;
     line-height: 1.65;
@@ -722,6 +737,14 @@ import Aside from '@aegis-initiative/design-system/components/Aside.astro';`}</c
     color: var(--color-text-muted);
     font-style: italic;
     margin-bottom: 1.25rem;
+  }
+
+  .prevnext-variant {
+    margin-bottom: 2.5rem;
+  }
+
+  .variant-label {
+    margin-bottom: 0.75rem;
   }
 
   pre {
