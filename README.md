@@ -1,10 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/ip--owner-Finnoybu%20IP%20LLC-blueviolet?style=flat-square" alt="IP Owner">
-  <a href="https://github.com/aegis-initiative"><img
-  src="https://img.shields.io/badge/org-aegis--initiative-0084e7?style=flat-square&logo=github" alt="Org"></a>
-  <a href="https://aegis-initiative.com"><img
-  src="https://img.shields.io/badge/domain-aegis--initiative.com-0084e7?style=flat-square" alt="Domain"></a>
-  <img src="https://img.shields.io/badge/visibility-public-lightgrey?style=flat-square" alt="Public">
+  <a href="https://aegis-initiative.com"><img src="https://img.shields.io/badge/site-aegis--initiative.com-0084e7?style=flat-square" alt="Site"></a>
+  <a href="https://github.com/aegis-initiative"><img src="https://img.shields.io/badge/org-aegis--initiative-0084e7?style=flat-square&logo=github" alt="Org"></a>
+  <img src="https://img.shields.io/badge/license-Apache--2.0-green?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/status-active-success?style=flat-square" alt="Status">
 </p>
 
 <p align="center">
@@ -16,129 +14,94 @@
 </p>
 
 <p align="center">
-  <strong>Architectural Enforcement & Governance of Intelligent Systems</strong>
-</p>
-
-<p align="center">
   <em>Capability without constraint is not intelligence™</em>
 </p>
 
----
+# AEGIS Initiative
 
-## What is AEGIS™?
+> The public home of the AEGIS Initiative — project roadmap, research output, press presence, and the front door to the AEGIS ecosystem.
 
-AEGIS™ is a governance architecture that enforces **deterministic
-constitutional governance over AI-generated actions** before they
-interact with operational infrastructure.
+## What it is
 
-Modern AI safety primarily addresses model behavior — what AI *says*. AEGIS addresses what AI *does*.
+This repository hosts [aegis-initiative.com](https://aegis-initiative.com) — the public-facing website for the AEGIS Initiative, plus the `@aegis-initiative/design-system` npm package that every AEGIS site consumes. It's the org's front door: a visitor who lands here should understand what AEGIS is, why it exists, who's behind it, and where to go next.
 
-As AI systems gain the ability to write and execute code, interact
-with APIs, control infrastructure, and operate as autonomous agents,
-alignment training alone is no longer sufficient. A model that behaves
-well most of the time can still cause catastrophic outcomes if granted
-unrestricted operational capabilities.
+AEGIS™ (Architectural Enforcement & Governance of Intelligent Systems) is a governance architecture that enforces deterministic constitutional governance over AI-generated actions before they interact with operational infrastructure. Modern AI safety primarily addresses what AI *says*. AEGIS addresses what AI *does*.
 
-AEGIS introduces a **governance runtime layer** between AI reasoning and system execution:
+## Why it exists
 
-```
-AI Agent
-   │
-   ▼
-AEGIS Governance Gateway
-   │
-   ▼
-Decision Engine
- ├ Capability Authorization
- ├ Authority Verification
- ├ Risk Evaluation
- └ Policy Enforcement
-   │
-   ▼
-Tool Proxy Layer
-   │
-   ▼
-External Systems
+As AI systems gain the ability to write and execute code, interact with APIs, control infrastructure, and operate as autonomous agents, alignment training alone is no longer sufficient. A model that behaves well most of the time can still cause catastrophic outcomes if granted unrestricted operational capabilities.
+
+AEGIS introduces a **governance runtime layer** between AI reasoning and system execution — capability authorization, authority verification, risk evaluation, and policy enforcement enforced by architecture rather than by model compliance. This repo is where the non-technical and semi-technical audiences enter the ecosystem: journalists, policy teams, prospective partners, and researchers evaluating whether AEGIS fits their problem.
+
+## Get started
+
+**Visit the site:** [aegis-initiative.com](https://aegis-initiative.com)
+
+**Read the constitution:** [aegis-constitution.com](https://aegis-constitution.com)
+
+**Explore the technical specs:** [aegis-governance.com](https://aegis-governance.com)
+
+**Browse developer docs:** [aegis-docs.com](https://aegis-docs.com)
+
+## Use
+
+The **design system package** is published on npm and consumed by every public AEGIS Astro site:
+
+```bash
+npm install @aegis-initiative/design-system
 ```
 
-**AI systems may propose actions. AEGIS™ evaluates those actions. Only approved actions execute.**
+Gallery and component reference: [aegis-initiative.com/ecosystem/design-system/](https://aegis-initiative.com/ecosystem/design-system/)
 
----
+## Develop
 
-## The Governance Gap
+Local development of the site:
 
-Current AI safety approaches govern what AI *says*, not what AI *does*.
+```bash
+git clone https://github.com/aegis-initiative/aegis-initiative.git
+cd aegis-initiative
+npm install
+npm run dev
+```
 
-When AI systems begin interacting with real infrastructure — databases, networks, financial systems, security tools —
-alignment alone is insufficient. AEGIS addresses this gap by making governance a **runtime property of the system**, not
-merely a training-time guideline.
+Local development of the design system package:
 
-This mirrors the transformation that occurred in computing security: from trusted programs operating freely to enforced
-process isolation, sandboxing, and role-based access control.
+```bash
+cd packages/aegis-design-system
+npm run build
+```
 
-Artificial intelligence has not yet undergone this transition. AEGIS is the architecture to make it happen.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines, branch conventions, and the PR review process.
 
----
+## How it fits the ecosystem
 
-## The AEGIS Ecosystem
+The AEGIS Initiative spans multiple repositories, each with a defined role:
 
-| Repository | Purpose | Domain |
+| Repository | Role | Domain |
 |---|---|---|
-| [aegis](https://github.com/aegis-initiative/aegis) | Governance doctrine, ADRs, cross-component specs | aegis-initiative.com |
-| [aegis-constitution](https://github.com/aegis-initiative/aegis-constitution) | Canonical governance charter — public, versioned, citeable | aegissystems.app |
-| [aegis-core](https://github.com/aegis-initiative/aegis-core) | Enforcement engine — risk scoring, mediation, policy runtime | aegis-platform.net |
-| [aegis-platform](https://github.com/aegis-initiative/aegis-platform) | Production platform — operator dashboard, API surface | aegis-platform.net |
-| [aegis-docs](https://github.com/aegis-initiative/aegis-docs) | Public documentation site | aegis-docs.com |
-| [aegis-labs](https://github.com/aegis-initiative/aegis-labs) | Research sandbox and experimental work | aegis-labs.dev |
-| [aegis-ops](https://github.com/aegis-initiative/aegis-ops) | CI/CD, infrastructure, deployment, runbooks | — |
-| [aegis-sdk](https://github.com/aegis-initiative/aegis-sdk) | Client SDK for npm and PyPI | aegis-docs.com |
+| [aegis-initiative](https://github.com/aegis-initiative/aegis-initiative) | Org home, public roadmap, design system | [aegis-initiative.com](https://aegis-initiative.com) |
+| [aegis-constitution](https://github.com/aegis-initiative/aegis-constitution) | Canonical governance charter | [aegis-constitution.com](https://aegis-constitution.com) |
+| [aegis-governance](https://github.com/aegis-initiative/aegis-governance) | Technical specifications, ATX-1 threat matrix, RFCs | [aegis-governance.com](https://aegis-governance.com) |
+| [aegis-core](https://github.com/aegis-initiative/aegis-core) | Enforcement engine — AGP-1 runtime | — |
+| [aegis-platform](https://github.com/aegis-initiative/aegis-platform) | Operator dashboard, API surface | [aegis-platform.net](https://aegis-platform.net) |
+| [aegis-sdk](https://github.com/aegis-initiative/aegis-sdk) | TypeScript + Python client libraries | — |
+| [aegis-docs](https://github.com/aegis-initiative/aegis-docs) | Developer documentation | [aegis-docs.com](https://aegis-docs.com) |
+| [aegis-federation](https://github.com/aegis-initiative/aegis-federation) | Cross-domain machine discovery protocol | [aegis-federation.com](https://aegis-federation.com) |
+| [aegis-labs](https://github.com/aegis-initiative/aegis-labs) | Research sandbox, adversarial testing | — |
+
+## License
+
+Apache-2.0 for code in this repository. The `@aegis-initiative/design-system` package is Apache-2.0. See [LICENSE](LICENSE).
+
+The AEGIS ecosystem uses a dual-licensing matrix: Apache-2.0 for permissive code, BSL-1.1 for enforcement runtimes (aegis-core, aegis-sdk), CC-BY-SA-4.0 for documentation and specifications, and proprietary licensing for the commercial platform.
+
+## Related
+
+- [Contribute](CONTRIBUTING.md) — how to propose changes and engage with the project
+- [Discussions](https://github.com/aegis-initiative/aegis-initiative/discussions) — community engagement
+- [Roadmap](https://aegis-initiative.com/ecosystem/roadmap/) — what's planned and in progress
+- [Press](https://aegis-initiative.com/press/) — publications, milestones, and media kit
 
 ---
 
-## Core Principles
-
-**Capability without constraint is not intelligence™**
-
-AEGIS is built on eight constitutional articles:
-
-- **Bounded Capability** — AI systems may only access explicitly defined capabilities
-- **Authority Verification** — All actions must be attributable to a verified actor
-- **Deterministic Enforcement** — Governance rules are enforced by architecture, not model compliance
-- **Risk Evaluation** — Actions are assessed for operational impact before execution
-- **Auditability** — All actions produce immutable audit records
-- **Human Override** — Escalation pathways ensure humans retain authority over high-impact decisions
-- **Least Privilege** — Systems receive only the capabilities required for their task
-- **Constitutional Supremacy** — Governance architecture takes precedence over model reasoning
-
-Read the full constitution: [aegis-constitution](https://github.com/aegis-initiative/aegis-constitution)
-
----
-
-## Notable Milestones
-
-- **2026-03-05** — AEGIS™ publicly released as an open governance architecture for intelligent systems
-- **2026-03-07** — AEGIS™ submitted as an unsolicited position statement to the NIST AI Risk Management Framework
-
----
-
-## Contributing
-
-AEGIS is an open governance architecture. Contributions are welcome from researchers, engineers, security professionals,
-policy teams, and anyone committed to building safer AI systems.
-
-- Read [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
-- Review open [RFCs](https://github.com/aegis-initiative/aegis/tree/main/rfc) to propose architectural improvements
-- Join [GitHub Discussions](https://github.com/aegis-initiative/aegis-initiative/discussions) to engage with the
-community
-- Report issues via the appropriate repo's issue tracker
-
----
-
-## IP & Trademark
-
-AEGIS Initiative is operated by **AEGIS Operations LLC**.
-
-AEGIS™ and **"Capability without constraint is not intelligence™"** are trademarks of **Finnoybu IP LLC**, used under
-license by **AEGIS Operations LLC**.
-
-Use of AEGIS™ marks in derivative works must not imply endorsement without explicit written permission.
+<sub>AEGIS™ and *"Capability without constraint is not intelligence™"* are trademarks of the AEGIS Initiative, used under license by AEGIS Operations LLC. Use of AEGIS™ marks in derivative works must not imply endorsement without explicit written permission.</sub>
