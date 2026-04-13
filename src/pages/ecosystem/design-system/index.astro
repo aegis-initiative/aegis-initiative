@@ -1,0 +1,760 @@
+---
+import DocLayout from "../../../layouts/DocLayout.astro";
+import Aside from "@aegis-initiative/design-system/components/Aside.astro";
+import AegisLogo from "@aegis-initiative/design-system/components/AegisLogo.astro";
+import AegisWordmark from "@aegis-initiative/design-system/components/AegisWordmark.astro";
+import Breadcrumb from "@aegis-initiative/design-system/components/Breadcrumb.astro";
+import PrevNext from "@aegis-initiative/design-system/components/PrevNext.astro";
+---
+
+<DocLayout
+  title="Design System"
+  description="Living reference for the @aegis-initiative/design-system package — color tokens, typography, spacing, components, and consumption patterns."
+>
+  <h1>Design System</h1>
+
+  <p class="lede">
+    A living reference for the <code>@aegis-initiative/design-system</code> package — the
+    shared visual identity used across every AEGIS site. Every component, color token, and
+    spacing value below is rendered from the <strong>same package</strong> the production
+    sites consume, so this page reflects exactly what visitors see in the wild.
+  </p>
+
+  <div class="meta-bar">
+    <span>
+      <strong>Package:</strong>
+      <a href="https://www.npmjs.com/package/@aegis-initiative/design-system" target="_blank" rel="noopener noreferrer"><code>@aegis-initiative/design-system</code></a>
+    </span>
+    <span>
+      <strong>Source:</strong>
+      <a href="https://github.com/aegis-initiative/aegis-initiative/tree/main/packages/aegis-design-system" target="_blank" rel="noopener noreferrer">monorepo</a>
+    </span>
+    <span><strong>License:</strong> Apache-2.0</span>
+  </div>
+
+  <hr />
+
+  <h2 id="installation">Installation</h2>
+
+  <p>The package is published on npm and consumed by all AEGIS Astro sites:</p>
+
+  <pre><code>npm install @aegis-initiative/design-system</code></pre>
+
+  <p>Import CSS in your Astro layout:</p>
+
+  <pre><code>{`import '@aegis-initiative/design-system/css/fonts.css';
+import '@aegis-initiative/design-system/css/tokens.css';
+import '@aegis-initiative/design-system/css/reset.css';`}</code></pre>
+
+  <p>Import components directly from their paths:</p>
+
+  <pre><code>{`import AegisLogo from '@aegis-initiative/design-system/components/AegisLogo.astro';
+import Aside from '@aegis-initiative/design-system/components/Aside.astro';`}</code></pre>
+
+  <hr />
+
+  <h2 id="colors">Colors</h2>
+
+  <p>
+    All color tokens are exposed as CSS custom properties on
+    <code>:root</code> and adapt automatically based on
+    <code>data-theme</code>. Toggle your theme (top-right header)
+    to see the palette swap live.
+  </p>
+
+  <h3>Brand colors</h3>
+
+  <p>The unmodified brand reference values, for use in print and fixed contexts:</p>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-chip" style="background:#161616"></div>
+      <div class="swatch-name">Brand Black</div>
+      <code class="swatch-hex">#161616</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:#777777"></div>
+      <div class="swatch-name">Brand Gray</div>
+      <code class="swatch-hex">#777777</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:#0084e7"></div>
+      <div class="swatch-name">Brand Blue</div>
+      <code class="swatch-hex">#0084e7</code>
+    </div>
+  </div>
+
+  <h3>Surface colors</h3>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-bg)"></div>
+      <div class="swatch-name">--color-bg</div>
+      <code class="swatch-hex">background</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-bg-subtle)"></div>
+      <div class="swatch-name">--color-bg-subtle</div>
+      <code class="swatch-hex">subtle</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-bg-muted)"></div>
+      <div class="swatch-name">--color-bg-muted</div>
+      <code class="swatch-hex">muted</code>
+    </div>
+  </div>
+
+  <h3>Border colors</h3>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-border);border:1px solid var(--color-border)"></div>
+      <div class="swatch-name">--color-border</div>
+      <code class="swatch-hex">standard</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-border-subtle);border:1px solid var(--color-border-subtle)"></div>
+      <div class="swatch-name">--color-border-subtle</div>
+      <code class="swatch-hex">subtle</code>
+    </div>
+  </div>
+
+  <h3>Text colors</h3>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-text)"></div>
+      <div class="swatch-name">--color-text</div>
+      <code class="swatch-hex">primary</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-text-secondary)"></div>
+      <div class="swatch-name">--color-text-secondary</div>
+      <code class="swatch-hex">secondary</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-text-muted)"></div>
+      <div class="swatch-name">--color-text-muted</div>
+      <code class="swatch-hex">muted</code>
+    </div>
+  </div>
+
+  <h3>Accent colors</h3>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-accent)"></div>
+      <div class="swatch-name">--color-accent</div>
+      <code class="swatch-hex">primary accent</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-accent-low)"></div>
+      <div class="swatch-name">--color-accent-low</div>
+      <code class="swatch-hex">tint</code>
+    </div>
+    <div class="swatch">
+      <div class="swatch-chip" style="background:var(--color-accent-high)"></div>
+      <div class="swatch-name">--color-accent-high</div>
+      <code class="swatch-hex">deep</code>
+    </div>
+  </div>
+
+  <Aside type="doctrine">
+    <p>
+      All accent + text pairings meet WCAG 2.1 AA standards (4.5:1 minimum) at both
+      light and dark themes. Body text and primary accent on background exceed AAA (7:1).
+    </p>
+  </Aside>
+
+  <hr />
+
+  <h2 id="typography">Typography</h2>
+
+  <p>
+    Two type families: <strong>IBM Plex Sans</strong> for headings (variable weight 100–700),
+    <strong>Poppins</strong> for body (300, 400, 500, 600). Both are self-hosted as WOFF2.
+  </p>
+
+  <div class="type-scale">
+    <div class="type-row">
+      <h1 class="type-sample">Heading 1 — 2.5rem</h1>
+      <code>fontSize.h1</code>
+    </div>
+    <div class="type-row">
+      <h2 class="type-sample">Heading 2 — 2rem</h2>
+      <code>fontSize.h2</code>
+    </div>
+    <div class="type-row">
+      <h3 class="type-sample">Heading 3 — 1.5rem</h3>
+      <code>fontSize.h3</code>
+    </div>
+    <div class="type-row">
+      <p class="type-sample" style="font-size:1.25rem">Aside title — 1.25rem</p>
+      <code>fontSize.asideTitle</code>
+    </div>
+    <div class="type-row">
+      <p class="type-sample">Body — 1rem (Poppins 300)</p>
+      <code>fontSize.body</code>
+    </div>
+    <div class="type-row">
+      <p class="type-sample" style="font-size:0.875rem">Footnote — 0.875rem</p>
+      <code>fontSize.footnote</code>
+    </div>
+    <div class="type-row">
+      <p class="type-sample" style="font-size:0.8125rem">Small — 0.8125rem</p>
+      <code>fontSize.small</code>
+    </div>
+    <div class="type-row">
+      <p class="type-sample" style="font-size:0.75rem">Caption — 0.75rem</p>
+      <code>fontSize.caption</code>
+    </div>
+  </div>
+
+  <h3>Font weights</h3>
+
+  <div class="weight-grid">
+    <div class="weight-sample" style="font-weight:300">Light (300)</div>
+    <div class="weight-sample" style="font-weight:400">Regular (400)</div>
+    <div class="weight-sample" style="font-weight:500">Medium (500)</div>
+    <div class="weight-sample" style="font-weight:600">Semi-Bold (600)</div>
+  </div>
+
+  <hr />
+
+  <h2 id="spacing">Spacing</h2>
+
+  <p>Six-step spacing scale, from <code>xs</code> (4px) through <code>2xl</code> (48px).</p>
+
+  <div class="spacing-stack">
+    <div class="spacing-row">
+      <code class="spacing-label">xs</code>
+      <div class="spacing-bar" style="width:0.25rem"></div>
+      <span class="spacing-px">4px / 0.25rem</span>
+    </div>
+    <div class="spacing-row">
+      <code class="spacing-label">sm</code>
+      <div class="spacing-bar" style="width:0.5rem"></div>
+      <span class="spacing-px">8px / 0.5rem</span>
+    </div>
+    <div class="spacing-row">
+      <code class="spacing-label">md</code>
+      <div class="spacing-bar" style="width:1rem"></div>
+      <span class="spacing-px">16px / 1rem</span>
+    </div>
+    <div class="spacing-row">
+      <code class="spacing-label">lg</code>
+      <div class="spacing-bar" style="width:1.5rem"></div>
+      <span class="spacing-px">24px / 1.5rem</span>
+    </div>
+    <div class="spacing-row">
+      <code class="spacing-label">xl</code>
+      <div class="spacing-bar" style="width:2rem"></div>
+      <span class="spacing-px">32px / 2rem</span>
+    </div>
+    <div class="spacing-row">
+      <code class="spacing-label">2xl</code>
+      <div class="spacing-bar" style="width:3rem"></div>
+      <span class="spacing-px">48px / 3rem</span>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2 id="breakpoints">Breakpoints</h2>
+
+  <p>Four named breakpoints govern responsive behavior across the design system:</p>
+
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Width</th><th>Layout change</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>mobile</code></td>
+        <td>&lt; 560px</td>
+        <td>Base font 14px, drawer-style sidebar, stacked layouts</td>
+      </tr>
+      <tr>
+        <td><code>tablet</code></td>
+        <td>≥ 560px</td>
+        <td>Base font 16px, full breadcrumbs visible</td>
+      </tr>
+      <tr>
+        <td><code>desktop</code></td>
+        <td>≥ 1024px</td>
+        <td>Fixed 320px sidebar, search bar, breadcrumb sidebar offset</td>
+      </tr>
+      <tr>
+        <td><code>wide</code></td>
+        <td>≥ 1367px</td>
+        <td>Fixed Table of Contents rail (320px) on the right</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+
+  <h2 id="surfaces">Surfaces</h2>
+
+  <h3>Border radius</h3>
+
+  <div class="surface-grid">
+    <div class="surface-sample" style="border-radius:0.25rem">sm — 0.25rem</div>
+    <div class="surface-sample" style="border-radius:0.3125rem">md — 0.3125rem</div>
+    <div class="surface-sample" style="border-radius:0.5rem">lg — 0.5rem</div>
+    <div class="surface-sample" style="border-radius:8px">card — 8px</div>
+    <div class="surface-sample" style="border-radius:6px">dropdown — 6px</div>
+  </div>
+
+  <h3>Shadows</h3>
+
+  <div class="surface-grid">
+    <div class="surface-sample shadow-sample" style="box-shadow:0 4px 16px rgba(0, 0, 0, 0.15)">dropdown</div>
+    <div class="surface-sample shadow-sample" style="box-shadow:0 8px 40px rgba(0, 0, 0, 0.35)">modal</div>
+  </div>
+
+  <h3>Z-index scale</h3>
+
+  <table>
+    <thead><tr><th>Layer</th><th>Value</th><th>Use</th></tr></thead>
+    <tbody>
+      <tr><td><code>tocRail</code></td><td>30</td><td>Right-side Table of Contents</td></tr>
+      <tr><td><code>tocDropdown</code></td><td>200</td><td>Mobile/tablet ToC overlay</td></tr>
+    </tbody>
+  </table>
+
+  <hr />
+
+  <h2 id="components">Components</h2>
+
+  <p>
+    Every component below is rendered from <code>@aegis-initiative/design-system</code>.
+    Hover over any sample to see what you'd see in production. Code snippets use the
+    canonical import paths.
+  </p>
+
+  <h3 id="aside">Aside</h3>
+
+  <p>
+    Contextual callout box with four semantic types. Used to highlight governance-specific
+    content categories.
+  </p>
+
+  <Aside type="doctrine">
+    <p><strong>Doctrine.</strong> Core governance principles. Use for normative statements
+    that apply across all AEGIS systems.</p>
+  </Aside>
+
+  <Aside type="application">
+    <p><strong>Application.</strong> How a doctrine is applied in practice. Use for
+    illustrative examples and concrete implementations.</p>
+  </Aside>
+
+  <Aside type="constraint">
+    <p><strong>Constraint.</strong> Limitations or boundaries that an implementation must
+    respect. Use for rules that constrain behavior without forbidding it.</p>
+  </Aside>
+
+  <Aside type="prohibition">
+    <p><strong>Prohibition.</strong> Explicitly forbidden actions. Use for things that
+    must never happen under any circumstances.</p>
+  </Aside>
+
+  <pre><code>{`<Aside type="doctrine">
+  <p>Core governance principle.</p>
+</Aside>`}</code></pre>
+
+  <h3 id="aegis-logo">AegisLogo</h3>
+
+  <p>Inline SVG shield+diamond mark. Colors driven by CSS custom properties — adapts to theme.</p>
+
+  <div class="component-row">
+    <div class="component-sample">
+      <AegisLogo size={24} />
+      <code>size={24}</code>
+    </div>
+    <div class="component-sample">
+      <AegisLogo size={48} />
+      <code>size={48}</code>
+    </div>
+    <div class="component-sample">
+      <AegisLogo size={96} />
+      <code>size={96}</code>
+    </div>
+    <div class="component-sample">
+      <AegisLogo size={144} />
+      <code>size={144}</code>
+    </div>
+  </div>
+
+  <pre><code>{`<AegisLogo size={48} />`}</code></pre>
+
+  <h3 id="aegis-wordmark">AegisWordmark</h3>
+
+  <p>Full wordmark — logo + "AEGIS" text. Sized via height or width; the other dimension is computed from aspect ratio.</p>
+
+  <div class="component-row">
+    <div class="component-sample">
+      <AegisWordmark height={32} />
+      <code>height={32}</code>
+    </div>
+    <div class="component-sample">
+      <AegisWordmark height={64} />
+      <code>height={64}</code>
+    </div>
+    <div class="component-sample">
+      <AegisWordmark height={128} />
+      <code>height={128}</code>
+    </div>
+  </div>
+
+  <pre><code>{`<AegisWordmark height={64} />`}</code></pre>
+
+  <h3 id="breadcrumb">Breadcrumb</h3>
+
+  <p>
+    Horizontal navigation showing the current page's location in the site hierarchy. Home
+    label is configurable via <code>homeLabel</code>; the last item renders as plain text
+    with <code>aria-current="page"</code>. Auto-clears the fixed sidebar at desktop widths.
+  </p>
+
+  <div class="component-frame">
+    <Breadcrumb
+      homeLabel="AEGIS Initiative"
+      items={[{ label: "About", href: "/about/" }, { label: "Funding & Support" }]}
+    />
+  </div>
+
+  <p class="component-note">
+    The breadcrumb above renders inside a frame so the desktop sidebar offset is visible.
+    On a real page, it sits below the header and aligns with the main content.
+  </p>
+
+  <pre><code>{`<Breadcrumb
+  homeLabel="AEGIS Initiative"
+  items={[
+    { label: "About", href: "/about/" },
+    { label: "Funding & Support" },
+  ]}
+/>`}</code></pre>
+
+  <h3 id="prev-next">PrevNext</h3>
+
+  <p>Sequential page navigation, typically rendered at the bottom of long-form content. Stacks vertically on mobile, horizontal on desktop (1024px+).</p>
+
+  <p><strong>Both prev and next:</strong></p>
+
+  <PrevNext
+    prev={{ label: "Mission & Vision", href: "/about/mission/" }}
+    next={{ label: "How We Work", href: "/about/how-we-work/" }}
+  />
+
+  <p><strong>Next only:</strong></p>
+
+  <PrevNext next={{ label: "First page", href: "/about/" }} />
+
+  <p><strong>Prev only:</strong></p>
+
+  <PrevNext prev={{ label: "Last previous page", href: "/about/funding/" }} />
+
+  <pre><code>{`<PrevNext
+  prev={{ label: "Mission", href: "/about/mission/" }}
+  next={{ label: "How We Work", href: "/about/how-we-work/" }}
+/>`}</code></pre>
+
+  <h3 id="header-footer-sidebar">Header, Sidebar, Footer, TableOfContents</h3>
+
+  <p>
+    These are page-chrome components consumed by every site's <code>DocLayout</code>. You're
+    looking at all four of them right now — the AEGIS Initiative wordmark in the top-left,
+    the section nav in the left sidebar, the "On this page" rail at top right, and the
+    footer with author + legal links at the bottom.
+  </p>
+
+  <p>
+    Because they're already in place around this page, there's no isolated demo here.
+    Their source is in the <a href="https://github.com/aegis-initiative/aegis-initiative/tree/main/packages/aegis-design-system/src/components" target="_blank" rel="noopener noreferrer">package components directory</a>.
+  </p>
+
+  <h3 id="search">Search</h3>
+
+  <p>
+    Full-text search powered by <a href="https://pagefind.app/" target="_blank" rel="noopener noreferrer">Pagefind</a>.
+    The trigger button lives in the header at desktop widths (1024px+); on mobile, the magnifying-glass icon
+    in the header tools opens the same modal. Try <kbd>Ctrl</kbd>+<kbd>K</kbd> (or <kbd>⌘</kbd>+<kbd>K</kbd>
+    on macOS) anywhere to invoke it.
+  </p>
+
+  <hr />
+
+  <h2 id="versioning">Versioning</h2>
+
+  <p>
+    The package follows semantic versioning. Breaking changes bump the major version, additive
+    features bump minor, and bug fixes bump patch. Consumer sites pin to a caret range
+    (<code>^0.x.y</code>) so they pick up patches automatically but stay on a known major.
+  </p>
+
+  <p>
+    Releases are published to npm via a tagged GitHub Actions workflow whenever a
+    <code>design-system-v*</code> tag is pushed to <code>aegis-initiative/main</code>. The
+    publish workflow uses OIDC trusted publishing — no npm token required.
+  </p>
+
+  <p>
+    See the <a href="https://www.npmjs.com/package/@aegis-initiative/design-system?activeTab=versions" target="_blank" rel="noopener noreferrer">version history on npm</a> for the full release log.
+  </p>
+
+  <hr />
+
+  <h2 id="consuming-sites">Consuming sites</h2>
+
+  <p>The design system is consumed in production by every public AEGIS Astro site:</p>
+
+  <ul>
+    <li><a href="https://aegis-initiative.com" target="_blank" rel="noopener noreferrer">aegis-initiative.com</a> — the org home (this site)</li>
+    <li><a href="https://aegis-constitution.com" target="_blank" rel="noopener noreferrer">aegis-constitution.com</a> — the governance charter</li>
+    <li><a href="https://aegis-docs.com" target="_blank" rel="noopener noreferrer">aegis-docs.com</a> — developer documentation</li>
+    <li><a href="https://aegis-governance.com" target="_blank" rel="noopener noreferrer">aegis-governance.com</a> — technical specifications</li>
+    <li><a href="https://aegis-federation.com" target="_blank" rel="noopener noreferrer">aegis-federation.com</a> — federation network</li>
+  </ul>
+
+  <p>
+    Any visual change made to the package and published as a new version propagates to all
+    five sites on their next dependency bump and rebuild.
+  </p>
+</DocLayout>
+
+<style>
+  .lede {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.75rem;
+    padding: 0.875rem 1.25rem;
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .swatch-chip {
+    width: 100%;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .swatch-name {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .swatch-hex {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .type-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.25rem 0 2rem;
+    padding: 1.25rem;
+    background-color: var(--color-bg-subtle);
+    border-radius: 6px;
+  }
+
+  .type-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding-bottom: 0.625rem;
+  }
+
+  .type-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .type-sample {
+    margin: 0;
+  }
+
+  .type-row code {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+  }
+
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .weight-sample {
+    padding: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 6px;
+    text-align: center;
+    background-color: var(--color-bg);
+    font-size: 1.0625rem;
+  }
+
+  .spacing-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    margin: 1.25rem 0 2rem;
+    padding: 1.25rem;
+    background-color: var(--color-bg-subtle);
+    border-radius: 6px;
+  }
+
+  .spacing-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .spacing-label {
+    width: 3rem;
+    flex-shrink: 0;
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .spacing-bar {
+    height: 1.25rem;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .spacing-px {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+
+  .surface-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .surface-sample {
+    padding: 2rem 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+
+  .shadow-sample {
+    border: none;
+    background-color: var(--color-bg);
+  }
+
+  .component-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.5rem 2rem;
+    padding: 1.5rem;
+    background-color: var(--color-bg-subtle);
+    border-radius: 6px;
+    margin: 1rem 0 1.25rem;
+  }
+
+  .component-sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .component-sample code {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .component-frame {
+    border: 1px dashed var(--color-border);
+    border-radius: 6px;
+    margin: 1rem 0 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-bg);
+  }
+
+  .component-note {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+
+  pre {
+    background-color: var(--color-bg-muted);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  code {
+    font-family: "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.85em;
+    background-color: var(--color-bg-muted);
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+  }
+
+  kbd {
+    font-family: "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.8em;
+    background-color: var(--color-bg-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 0.125rem 0.375rem;
+  }
+</style>
