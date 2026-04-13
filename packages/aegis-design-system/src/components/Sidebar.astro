@@ -26,6 +26,15 @@ export interface NavItem {
   items?: NavItem[];
 }
 
+interface ExtraLink {
+  label: string;
+  href: string;
+  /** Path prefix used for active-state matching (e.g. "/data" makes /data/foo also active). */
+  activePrefix?: string;
+  /** Optional inline SVG markup. If omitted, no icon is rendered. */
+  iconSvg?: string;
+}
+
 interface Props {
   /** Main site navigation (accordion-capable). */
   nav: NavItem[];
@@ -35,9 +44,11 @@ interface Props {
   version?: string;
   /** Href for the version badge. If omitted, no link is generated. */
   versionHref?: string;
+  /** Optional extra link rendered below the nav with a top border (e.g. "Data Downloads"). */
+  extraLink?: ExtraLink;
 }
 
-const { nav, legalNav, version, versionHref } = Astro.props;
+const { nav, legalNav, version, versionHref, extraLink } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const isLegal = !!legalNav && pathname.startsWith('/legal');
@@ -128,6 +139,18 @@ function slugHref(slug: string): string {
           )
         ))}
       </ul>
+    )}
+
+    {extraLink && (
+      <div class="nav-extra-link">
+        <a
+          href={extraLink.href}
+          class={`nav-link ${extraLink.activePrefix && pathname.startsWith(extraLink.activePrefix) ? 'active' : ''}`}
+        >
+          {extraLink.iconSvg && <Fragment set:html={extraLink.iconSvg} />}
+          {extraLink.label}
+        </a>
+      </div>
     )}
   </div>
 
@@ -250,6 +273,25 @@ function slugHref(slug: string): string {
 
   :global([data-theme="dark"]) .nav-link.active {
     color: #161616;
+  }
+
+  /* Extra link below main nav (e.g. "Data Downloads") */
+  .nav-extra-link {
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid var(--color-border-subtle);
+    margin-top: 0.5rem;
+  }
+
+  .nav-extra-link .nav-link {
+    margin-left: 0;
+    border-left: none;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  .nav-extra-link .nav-link svg {
+    vertical-align: -2px;
+    margin-right: 0.375rem;
   }
 
   /* Version badge in sidebar footer — mobile only */
