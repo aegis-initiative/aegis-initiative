@@ -9,3 +9,8 @@ description: Release history for the AEGIS Initiative site
 
 ## 2026
 
+
+### [April](/releases/26/4/)
+
+- [v26.4.12](/releases/26/4/#release--v26412) — Contact page restructure, design system updates, and navigation improvements
+
