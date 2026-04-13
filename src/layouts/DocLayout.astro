@@ -27,10 +27,36 @@ const sectionLabels: Record<string, string> = {
   press: 'Press',
   contact: 'Contact',
   legal: 'Legal',
+  releases: 'Releases',
 };
 
+const MONTH_NAMES = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+
 const breadcrumbItems: { label: string; href?: string }[] = [];
-if (segments.length > 0 && sectionLabels[segments[0]]) {
+
+if (segments[0] === 'releases' && segments.length >= 3) {
+  // Release-notes pages have a /releases/YY/M/[D]/ path. There is no
+  // /releases/YY/ index, so the year segment is collapsed into a flat
+  // "Releases > <pretty label>" structure.
+  const yy = segments[1];
+  const month = segments[2];
+  const day = segments[3];
+  const year = 2000 + parseInt(yy, 10);
+  const monthIdx = parseInt(month, 10) - 1;
+  const monthName = MONTH_NAMES[monthIdx] ?? month;
+
+  breadcrumbItems.push({ label: 'Releases', href: '/releases/' });
+  if (day !== undefined) {
+    // Daily dev-log: AEGIS Initiative > Releases > April 12, 2026
+    breadcrumbItems.push({ label: title });
+  } else {
+    // Monthly: AEGIS Initiative > Releases > April 2026
+    breadcrumbItems.push({ label: `${monthName} ${year}` });
+  }
+} else if (segments.length > 0 && sectionLabels[segments[0]]) {
   if (segments.length === 1) {
     // Section index — just show section name as current page
     breadcrumbItems.push({ label: sectionLabels[segments[0]] });
