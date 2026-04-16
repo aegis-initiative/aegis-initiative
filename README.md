@@ -31,7 +31,7 @@ AEGIS™ (Architectural Enforcement & Governance of Intelligent Systems) is a go
 
 As AI systems gain the ability to write and execute code, interact with APIs, control infrastructure, and operate as autonomous agents, alignment training alone is no longer sufficient. A model that behaves well most of the time can still cause catastrophic outcomes if granted unrestricted operational capabilities.
 
-AEGIS introduces a **governance runtime layer** between AI reasoning and system execution — capability authorization, authority verification, risk evaluation, and policy enforcement enforced by architecture rather than by model compliance. This repo is where the non-technical and semi-technical audiences enter the ecosystem: journalists, policy teams, prospective partners, and researchers evaluating whether AEGIS fits their problem.
+AEGIS introduces a **governance runtime layer** between AI reasoning and system execution — capability authorization, authority verification, risk evaluation, and policy enforcement, implemented in architecture rather than left to model compliance. This repo is where the non-technical and semi-technical audiences enter the ecosystem: journalists, policy teams, prospective partners, and researchers evaluating whether AEGIS fits their problem.
 
 ## Get started
 
