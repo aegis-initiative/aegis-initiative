@@ -66,6 +66,10 @@ if (segments[0] === 'releases' && segments.length >= 3) {
     breadcrumbItems.push({ label: title });
   }
 }
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const fullTitle = `${title} | AEGIS Initiative`;
+const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
 ---
 
 <!doctype html>
@@ -116,25 +120,50 @@ if (segments[0] === 'releases' && segments.length >= 3) {
     </script>
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "AEGIS Initiative",
-      "url": "https://aegis-initiative.com",
-      "description": "The AEGIS Initiative exists to establish governance-first security as the foundational standard for autonomous AI systems.",
-      "founder": {
-        "@type": "Person",
-        "name": "Kenneth Tannenbaum"
-      },
-      "foundingDate": "2026-01-26",
-      "sameAs": [
-        "https://github.com/aegis-initiative",
-        "https://aegis-constitution.com",
-        "https://aegis-docs.com"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://aegis-initiative.com#org",
+          "name": "AEGIS Initiative",
+          "url": "https://aegis-initiative.com",
+          "description": "The AEGIS Initiative exists to establish governance-first security as the foundational standard for autonomous AI systems.",
+          "founder": {
+            "@type": "Person",
+            "name": "Kenneth Tannenbaum"
+          },
+          "foundingDate": "2026-01-26",
+          "sameAs": [
+            "https://github.com/aegis-initiative",
+            "https://aegis-constitution.com",
+            "https://aegis-docs.com"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://aegis-initiative.com#site",
+          "name": "AEGIS Initiative",
+          "url": "https://aegis-initiative.com",
+          "publisher": { "@id": "https://aegis-initiative.com#org" }
+        },
+        isHome ? {
+          "@type": "WebPage",
+          "name": fullTitle,
+          "url": pageUrl,
+          "description": description,
+          "isPartOf": { "@id": "https://aegis-initiative.com#site" }
+        } : {
+          "@type": "Article",
+          "headline": title,
+          "name": fullTitle,
+          "url": pageUrl,
+          "description": description,
+          "isPartOf": { "@id": "https://aegis-initiative.com#site" },
+          "publisher": { "@id": "https://aegis-initiative.com#org" }
+        }
       ]
-    }
-    </script>
+    })} />
   </head>
   <body>
     <Header />
