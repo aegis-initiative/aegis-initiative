@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [April](/releases/26/4/)
 
+- [v26.4.29](/releases/26/4/#release--v26429) — Added sitemap and structured data for improved SEO
 - [v26.4.20](/releases/26/4/#release--v26420) — Added custom 404 page with similar page suggestions and link tracking
 - [v26.4.16](/releases/26/4/#release--v26416) — Improved README clarity and removed redundancy
 - [v26.4.13](/releases/26/4/#release--v26413) — Design system improvements and breadcrumb sidebar fixes
