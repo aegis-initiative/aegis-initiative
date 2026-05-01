@@ -11,6 +11,11 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 ## 2026
 
 
+### [May](/releases/26/4/)
+
+- [v26.4.30](/releases/26/4/#release--v26430) — Added ecosystem links and enabled Labs in navigation menu
+
+
 ### [April](/releases/26/4/)
 
 - [v26.4.29](/releases/26/4/#release--v26429) — Added sitemap and structured data for improved SEO
