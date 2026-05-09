@@ -24,8 +24,9 @@ You are distinct from AEGIS Prime (central authority, lives in the `aegis/` repo
 ## Publication registry
 
 - **Public roadmap** (rendered): [aegis-initiative.com/ecosystem/roadmap](https://aegis-initiative.com/ecosystem/roadmap/)
+- **Ecosystem timeline** (rendered, canonical): [aegis-initiative.com/ecosystem/timeline](https://aegis-initiative.com/ecosystem/timeline/) — dated record of public artifacts; press milestones link here for full detail
 - **Design system gallery** (rendered): [aegis-initiative.com/ecosystem/design-system](https://aegis-initiative.com/ecosystem/design-system/)
-- **Milestones** (rendered): [aegis-initiative.com/press/milestones](https://aegis-initiative.com/press/milestones/)
+- **Milestones** (rendered, press-kit highlights): [aegis-initiative.com/press/milestones](https://aegis-initiative.com/press/milestones/)
 - **Design system package** (npm): [@aegis-initiative/design-system](https://www.npmjs.com/package/@aegis-initiative/design-system)
 - **Detailed internal roadmap** (canonical, not published): lives in the `aegis/` repo
 
