@@ -15,7 +15,8 @@
     "DALL", "WCAG", "Sturrock", "Univers",
     "aegisinitiative", "aegissystems",
     "frontmatter", "grayscale", "headshots",
-    "letterforms", "rgba", "sandboxing", "wght"
+    "letterforms", "rgba", "sandboxing", "wght",
+    "roadmaps", "dont", "wdth", "Impressum"
   ],
   "ignorePaths": [
     "node_modules/**",

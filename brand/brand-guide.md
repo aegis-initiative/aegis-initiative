@@ -22,7 +22,7 @@ first mention in any document, page, or context:
 Never use "Aegis" or "aegis" in running text when referring to the brand. The
 name is always fully capitalized: **AEGIS**.
 
-The tagline **"Capability without constraint is not intelligence"** is also an
+The tagline **"Capability without constraint is not intelligence"**™ is also an
 unregistered trademark of Finnoybu IP LLC. Treat it the same way: ™ on first
 use, capital A on "AEGIS" wherever the tagline appears.
 
