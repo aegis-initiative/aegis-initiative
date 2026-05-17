@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [May](/releases/26/5/)
 
+- [v26.5.16](/releases/26/5/#release--v26516) — Fixed spelling and consistency issues across the site
 - [v26.5.9](/releases/26/5/#release--v2659) — Added canonical timeline page to ecosystem section
 
 
