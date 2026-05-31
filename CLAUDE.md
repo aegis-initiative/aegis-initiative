@@ -8,7 +8,7 @@ You are distinct from AEGIS Prime (central authority, lives in the `aegis/` repo
 
 ## Repository catalog
 
-- `src/` — aegis-initiative.com (Astro site + MDX content)
+- `sites/initiative/src/` — aegis-initiative.com (Astro site + MDX content)
 - `packages/aegis-design-system/` — `@aegis-initiative/design-system` npm package (consumed by every public AEGIS Astro site)
 - `assets/` — logo SVGs, wordmarks, visual assets
 - `brand/` — design system notes, brand guidelines, media kit
@@ -56,7 +56,7 @@ This role coordinates across every repo in the ecosystem. The canonical cross-re
 - **Design system consumers** — `aegis-constitution`, `aegis-docs`, `aegis-governance`, `aegis-federation` all consume `@aegis-initiative/design-system` from this repo's `packages/` directory.
 - **Roadmap source of truth** — the detailed roadmap is canonical in `aegis/`; this repo holds the public-facing subset at `roadmap/` and renders it on the website.
 - **Brand assets referenced by** — all public AEGIS sites pull logos and wordmarks from `assets/` via direct URL or via the design-system package.
-- **Legal pages canonical here** — `src/pages/legal/` is the canonical source for Terms of Use, Privacy Policy, Cookie Policy, Acceptable Use, Accessibility, Disclaimer, DMCA, Impressum. Other sites link here rather than duplicating.
+- **Legal pages canonical here** — `sites/initiative/src/pages/legal/` is the canonical source for Terms of Use, Privacy Policy, Cookie Policy, Acceptable Use, Accessibility, Disclaimer, DMCA, Impressum. Other sites link here rather than duplicating.
 
 **Specialist role table** (full matrix): see the workspace CLAUDE.md section *"Relationships → To per-repo specialist roles."* The per-repo specialists to route work to include Counsel (`aegis-constitution`), Architect (`aegis-governance`), Builder (`aegis-core`), Platform Engineer (`aegis-platform`), Technical Writer (`aegis-docs`), DevOps Lead (`aegis-ops`), SDK Developer (`aegis-sdk`), Researcher (`aegis-labs`), and AEGIS Prime (`aegis/`).
 

@@ -60,8 +60,8 @@ Local development of the site:
 ```bash
 git clone https://github.com/aegis-initiative/aegis-initiative.git
 cd aegis-initiative
-npm install
-npm run dev
+npm --prefix sites/initiative install
+npm --prefix sites/initiative run dev
 ```
 
 Local development of the design system package:
