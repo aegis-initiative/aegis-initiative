@@ -11,6 +11,11 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 ## 2026
 
 
+### [June](/releases/26/5/)
+
+- [v26.5.31](/releases/26/5/#release--v26531) — Added security headers across the site for improved protection
+
+
 ### [May](/releases/26/5/)
 
 - [v26.5.29](/releases/26/5/#release--v26529) — Updated ATX-1 references to version 2.4 specifications
