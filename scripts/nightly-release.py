@@ -44,6 +44,9 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 
+SITE_ROOT = "sites/initiative"
+RELEASES_ROOT = f"{SITE_ROOT}/src/pages/releases"
+
 
 def run(cmd):
     result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
@@ -360,7 +363,7 @@ def update_daily_log(file_path, tag, builds_str, release_entries):
 
 def update_monthly(year, month, tag, builds_str, release_entries, day):
     """Add release entry to monthly file."""
-    file_path = f"src/pages/releases/{year}/{month}.md"
+    file_path = f"{RELEASES_ROOT}/{year}/{month}.md"
 
     month_name = datetime.now(timezone.utc).strftime("%B")
     year_full = datetime.now(timezone.utc).strftime("%Y")
@@ -412,7 +415,7 @@ sidebar:
 
 def update_index(year, month, tag, summary):
     """Add/update entry in release index."""
-    index_path = "src/pages/releases/index.md"
+    index_path = f"{RELEASES_ROOT}/index.md"
 
     if not os.path.exists(index_path):
         print(f"Error: {index_path} not found", file=sys.stderr)
@@ -482,7 +485,7 @@ def main():
     builds_str = first_hash if first_hash == last_hash else f"{first_hash} – {last_hash}"
 
     # Read the daily dev log
-    daily_path = f"src/pages/releases/{year}/{month}/{day}.md"
+    daily_path = f"{RELEASES_ROOT}/{year}/{month}/{day}.md"
     if os.path.exists(daily_path):
         with open(daily_path, "r", encoding="utf-8") as f:
             dev_log_content = f.read()

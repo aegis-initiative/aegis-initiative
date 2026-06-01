@@ -8,7 +8,7 @@ node_modules/
 .astro/
 
 # pagefind
-public/pagefind/
+sites/initiative/public/pagefind/
 
 # environment
 .env
