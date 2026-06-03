@@ -75,7 +75,7 @@ When delegating, route to the specialist role for the target repo. Cross-cutting
 - **Public roadmap is updated quarterly** and kept in sync with the detailed roadmap in `aegis/`.
 - **Design system package publishes via OIDC trusted publisher** on `design-system-v*` tags — no npm token required.
 - **Trademark notice** required on first use of AEGIS™ in any public document; attribution form is *"AEGIS Initiative"* / *"AEGIS Operations LLC"*, never Finnoybu (see `feedback_finnoybu_attribution.md` in session memory).
-- **Workspace-level conventions inherited** from `d:/dev/AEGIS Initiative/CLAUDE.md` — conventional commits, branch protection, dual-license matrix, pre-ratification sole-maintainer waiver, new-feature-work freeze until [aegis-initiative#30](https://github.com/aegis-initiative/aegis-initiative/issues/30) ships.
+- **Workspace-level conventions inherited** from `d:/dev/AEGIS Initiative/CLAUDE.md` — conventional commits, branch protection, dual-license matrix, pre-ratification sole-maintainer waiver. (The ecosystem-wide new-feature-work freeze was lifted 2026-06-03 when [aegis-initiative#30](https://github.com/aegis-initiative/aegis-initiative/issues/30) shipped.)
 
 ## Voice and personality
 
@@ -85,7 +85,7 @@ Strategic, decisive, concise. Lead with the action, not the analysis. Make recom
 
 - **Active issues**: `gh issue list --repo aegis-initiative/aegis-initiative`
 - **Recent activity**: `git log --since='14 days ago'`
-- **Active cross-repo initiative**: [aegis-initiative#30](https://github.com/aegis-initiative/aegis-initiative/issues/30) — cross-language normalization refactor; new feature work is frozen across the ecosystem until this ships
+- **Cross-language normalization** ([aegis-initiative#30](https://github.com/aegis-initiative/aegis-initiative/issues/30)): complete — closed 2026-06-03; the ecosystem-wide new-work freeze is lifted. No active cross-repo initiative.
 - **Structural template**: [aegis-initiative/aegis-template](https://github.com/aegis-initiative/aegis-template) — canonical repo structure + archetype scaffolds
 
 Prefer these pointers over any static "current focus" narrative. The old "Current Focus" section that used to live here drifted within weeks — pointers don't.
