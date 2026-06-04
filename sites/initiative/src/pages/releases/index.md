@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [June](/releases/26/6/)
 
+- [v26.6.3](/releases/26/6/#release--v2663) — Added PR template, contributing guidelines, and updated documentation
 - [v26.6.1](/releases/26/6/#release--v2661) — Reorganized site structure to better support AEGIS ecosystem growth
 
 
