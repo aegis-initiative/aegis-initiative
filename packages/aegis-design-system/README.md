@@ -166,4 +166,4 @@ Design tokens are defined in the brand guide at `brand/design-tokens.md`. When u
 
 ## License
 
-Apache-2.0. Brand assets are proprietary to Finnoybu IP LLC.
+Apache-2.0. Brand assets are proprietary to AEGIS Initiative.

@@ -1,7 +1,7 @@
 # AEGIS Brand Guide
 
 > Official brand usage guidelines for the AEGIS Initiative.
-> All brand assets are owned by Finnoybu IP LLC.
+> All brand assets are owned by AEGIS Initiative.
 
 This document covers brand *rules* — trademark usage, logo clear space, permitted
 marks, and what not to do. For developer-facing implementation details (CSS
@@ -12,7 +12,7 @@ package README](../packages/aegis-design-system/README.md).
 
 ## Trademark
 
-**AEGIS** is a trademark of Finnoybu IP LLC. Use the trademark symbol (TM) on
+**AEGIS** is a trademark of AEGIS Initiative. Use the trademark symbol (TM) on
 first mention in any document, page, or context:
 
 - First use: **AEGIS(TM)** or **AEGIS™**
@@ -23,7 +23,7 @@ Never use "Aegis" or "aegis" in running text when referring to the brand. The
 name is always fully capitalized: **AEGIS**.
 
 The tagline **"Capability without constraint is not intelligence"™** is also an
-unregistered trademark of Finnoybu IP LLC. Treat it the same way: ™ on first
+unregistered trademark of AEGIS Initiative. Treat it the same way: ™ on first
 use, capital A on "AEGIS" wherever the tagline appears.
 
 For permitted uses, uses requiring permission, and enforcement, see the

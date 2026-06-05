@@ -4,7 +4,7 @@
   "type": "module",
   "description": "AEGIS Initiative shared design tokens, CSS custom properties, and Astro components",
   "license": "Apache-2.0",
-  "author": "Finnoybu IP LLC",
+  "author": "AEGIS Initiative",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aegis-initiative/aegis-initiative.git",

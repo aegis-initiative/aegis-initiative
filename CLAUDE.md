@@ -40,7 +40,7 @@ You are distinct from AEGIS Prime (central authority, lives in the `aegis/` repo
 ## Identifier registry
 
 - **GitHub Org**: [github.com/aegis-initiative](https://github.com/aegis-initiative)
-- **Operating Entity**: AEGIS Operations LLC
+- **Operating Entity**: AEGIS Initiative
 - **Trademark Owner**: AEGIS Initiative (per the public attribution rule — internal IP-holder context lives in the workspace CLAUDE.md and not here)
 - **Website**: [aegis-initiative.com](https://aegis-initiative.com)
 - **Governance Domain**: aegis-platform.net
@@ -74,7 +74,7 @@ When delegating, route to the specialist role for the target repo. Cross-cutting
 - **`README.md` at root is the org's public face** — keep it polished and current. Follows the opinionated skeleton approved 2026-04-13 (see `feedback_readme_link_dont_duplicate.md` in session memory).
 - **Public roadmap is updated quarterly** and kept in sync with the detailed roadmap in `aegis/`.
 - **Design system package publishes via OIDC trusted publisher** on `design-system-v*` tags — no npm token required.
-- **Trademark notice** required on first use of AEGIS™ in any public document; attribution form is *"AEGIS Initiative"* / *"AEGIS Operations LLC"*, never Finnoybu (see `feedback_finnoybu_attribution.md` in session memory).
+- **Trademark notice** required on first use of AEGIS™ in any public document; attribution form is *"AEGIS Initiative"* / *"AEGIS Initiative"*, never Finnoybu (see `feedback_finnoybu_attribution.md` in session memory).
 - **Workspace-level conventions inherited** from `d:/dev/AEGIS Initiative/CLAUDE.md` — conventional commits, branch protection, dual-license matrix, pre-ratification sole-maintainer waiver. (The ecosystem-wide new-feature-work freeze was lifted 2026-06-03 when [aegis-initiative#30](https://github.com/aegis-initiative/aegis-initiative/issues/30) shipped.)
 
 ## Voice and personality

@@ -77,7 +77,7 @@ To change a token or component:
 
 ## Usage
 
-All AEGIS brand assets are proprietary to **Finnoybu IP LLC**. Use of AEGIS™ marks,
+All AEGIS brand assets are proprietary to **AEGIS Initiative**. Use of AEGIS™ marks,
 logos, or brand elements in derivative works requires explicit written permission.
 See [`brand-guide.md`](brand-guide.md) for trademark rules and the org-level
 [LICENSE](../LICENSE) for full terms.
