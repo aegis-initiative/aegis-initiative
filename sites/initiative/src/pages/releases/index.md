@@ -11,6 +11,11 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 ## 2026
 
 
+### [July](/releases/26/7/)
+
+- [v26.7.7](/releases/26/7/#release--v2677) — Fixed AEGIS acronym expansion on about pages
+
+
 ### [June](/releases/26/6/)
 
 - [v26.6.3](/releases/26/6/#release--v2663) — Added PR template, contributing guidelines, and updated documentation
