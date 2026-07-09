@@ -36,12 +36,13 @@ dev_log_entry = f"- {message} ({hash_val})\n"
 
 if not os.path.exists(file_path):
     # Create new daily log
+    # `layout:` is required — markdown under src/pages/ renders bare
+    # (unstyled) without it. Path is relative to the daily-log file at
+    # releases/YY/M/D.md.
     content = f"""---
-title: "{month_name} {day_int}, 2026"
-description: "Development log for {month_name} {day_int}, 2026"
-template: doc
-sidebar:
-  hidden: true
+layout: ../../../../layouts/ReleaseLayout.astro
+title: "{month_name} {day_int}, 20{year}"
+description: "Development log for {month_name} {day_int}, 20{year}"
 ---
 
 ## Development Log
