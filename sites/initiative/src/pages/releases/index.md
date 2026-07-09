@@ -22,25 +22,17 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 - [v26.6.1](/releases/26/6/#release--v2661) — Reorganized site structure to better support AEGIS ecosystem growth
 
 
-### [June](/releases/26/5/)
-
-- [v26.5.31](/releases/26/5/#release--v26531) — Added security headers across the site for improved protection
-
-
 ### [May](/releases/26/5/)
 
+- [v26.5.31](/releases/26/5/#release--v26531) — Added security headers across the site for improved protection
 - [v26.5.29](/releases/26/5/#release--v26529) — Updated ATX-1 references to version 2.4 specifications
 - [v26.5.16](/releases/26/5/#release--v26516) — Fixed spelling and consistency issues across the site
 - [v26.5.9](/releases/26/5/#release--v2659) — Added canonical timeline page to ecosystem section
 
 
-### [May](/releases/26/4/)
-
-- [v26.4.30](/releases/26/4/#release--v26430) — Added ecosystem links and enabled Labs in navigation menu
-
-
 ### [April](/releases/26/4/)
 
+- [v26.4.30](/releases/26/4/#release--v26430) — Added ecosystem links and enabled Labs in navigation menu
 - [v26.4.29](/releases/26/4/#release--v26429) — Added sitemap and structured data for improved SEO
 - [v26.4.20](/releases/26/4/#release--v26420) — Added custom 404 page with similar page suggestions and link tracking
 - [v26.4.16](/releases/26/4/#release--v26416) — Improved README clarity and removed redundancy
