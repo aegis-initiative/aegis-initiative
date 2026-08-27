@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <em>Capability without constraint is not intelligence®</em>
+  <em>Capability without constraint is not intelligence™</em>
 </p>
 
 # AEGIS Initiative
@@ -104,4 +104,4 @@ The AEGIS ecosystem uses a dual-licensing matrix: Apache-2.0 for permissive code
 
 ---
 
-<sub>AEGIS™ and *"Capability without constraint is not intelligence®"* are trademarks of the AEGIS Initiative, used under license by AEGIS Initiative. Use of AEGIS™ marks in derivative works must not imply endorsement without explicit written permission.</sub>
+<sub>AEGIS™ and *"Capability without constraint is not intelligence™"* are trademarks of the AEGIS Initiative, used under license by AEGIS Initiative. Use of AEGIS™ marks in derivative works must not imply endorsement without explicit written permission.</sub>

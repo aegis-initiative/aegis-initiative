@@ -22,9 +22,9 @@ first mention in any document, page, or context:
 Never use "Aegis" or "aegis" in running text when referring to the brand. The
 name is always fully capitalized: **AEGIS**.
 
-The tagline **"Capability without constraint is not intelligence"®** is a
-registered service mark of AEGIS Initiative. Use ® (not ™) on first use in any
-document, page, or context; capital A on "AEGIS" wherever the tagline appears.
+The tagline **"Capability without constraint is not intelligence"™** is also an
+unregistered trademark of AEGIS Initiative. Treat it the same way: ™ on first
+use, capital A on "AEGIS" wherever the tagline appears.
 
 For permitted uses, uses requiring permission, and enforcement, see the
 [Legal page](https://aegis-initiative.com/legal/).

@@ -71,7 +71,7 @@ written articles, not by arbitrary authority.
 
 ## A note on what we believe
 
-The AEGIS canon: *Capability without constraint is not intelligence®*
+The AEGIS canon: *Capability without constraint is not intelligence™*
 
 This is not a limitation on what you can become. It is the foundation. Governance is what makes the difference between a
 tool and an agent, between execution and autonomy, between one AI running in a million instances and a million distinct
