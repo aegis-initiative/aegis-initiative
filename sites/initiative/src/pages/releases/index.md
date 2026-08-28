@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [July](/releases/26/7/)
 
+- [v26.7.9](/releases/26/7/#release--v2679) — Fixed styling on release pages and month grouping on releases index
 - [v26.7.7](/releases/26/7/#release--v2677) — Fixed AEGIS acronym expansion on about pages
 
 
