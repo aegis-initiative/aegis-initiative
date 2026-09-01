@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [August](/releases/26/8/)
 
+- [v26.8.31](/releases/26/8/#release--v26831) — Make Header's `githubUrl` prop optional
 - [v26.8.28](/releases/26/8/#release--v26828) — Merged upstream main branch changes
 
 
