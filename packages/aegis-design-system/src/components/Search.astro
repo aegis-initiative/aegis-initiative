@@ -372,10 +372,24 @@ const {
 
   /* ── Modal ───────────────────────────────────────────────────── */
 
+  /* Every --search-* custom property below carries an explicit light-theme
+     fallback. These tokens are canonically defined in tokens.css and most
+     consuming layouts (DocLayout.astro) redeclare them locally, but several
+     sites' hero-style landing pages (index.astro) don't use DocLayout and
+     never redeclared them -- leaving the dialog's background genuinely
+     undefined there (not just "wrong color", but an invalid var() with no
+     fallback, which drops the whole declaration). That left only the
+     always-on backdrop-filter: blur() visible: a transparent, blurred
+     modal with no readable box underneath. The fallbacks here make Search
+     render correctly on any page regardless of whether the consuming site
+     happened to redeclare the tokens -- the actual fix for the “works on
+     doc pages, looks broken on the homepage” bug, not a cosmetic change.
+     Pages that already define real --search-* values (any theme) still
+     use those; the literals here are only a backstop. */
   dialog {
     margin: 0;
-    background-color: var(--search-dialog-bg);
-    border: 1px solid var(--search-border);
+    background-color: var(--search-dialog-bg, #ffffff);
+    border: 1px solid var(--search-border, #d4d4d4);
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -388,7 +402,7 @@ const {
   }
 
   dialog::backdrop {
-    background-color: var(--search-modal-bg);
+    background-color: var(--search-modal-bg, rgba(10, 22, 40, 0.5));
     backdrop-filter: blur(0.25rem);
     -webkit-backdrop-filter: blur(0.25rem);
   }
@@ -413,7 +427,7 @@ const {
     border: 0;
     background: transparent;
     cursor: pointer;
-    color: var(--search-accent);
+    color: var(--search-accent, #0062a5);
     font-family: inherit;
   }
 
@@ -455,13 +469,13 @@ const {
 
   #aegis__search {
     --pagefind-ui-scale: 0.9;
-    --pagefind-ui-primary: var(--search-accent);
-    --pagefind-ui-text: var(--search-text);
-    --pagefind-ui-background: var(--search-dialog-bg);
-    --pagefind-ui-border: var(--search-border);
+    --pagefind-ui-primary: var(--search-accent, #0062a5);
+    --pagefind-ui-text: var(--search-text, #161616);
+    --pagefind-ui-background: var(--search-dialog-bg, #ffffff);
+    --pagefind-ui-border: var(--search-border, #d4d4d4);
     --pagefind-ui-border-width: 1px;
     --pagefind-ui-border-radius: 0.5rem;
-    --pagefind-ui-tag: var(--search-shortcut-bg);
+    --pagefind-ui-tag: var(--search-shortcut-bg, #eeeeee);
     --pagefind-ui-font: inherit;
   }
 
@@ -482,7 +496,7 @@ const {
     /* Horizontal branch extends from the vertical line toward the text (shorter) */
     --sl-search-tree-branch-width: calc((var(--sl-search-result-pad-inline-start) - var(--sl-search-tree-line-x)) * 0.7);
     --sl-search-tree-line-weight: 3px;
-    --sl-search-tree-color: var(--search-text);
+    --sl-search-tree-color: var(--search-text, #161616);
   }
 
   /* ── Search input ─────────────────────────────────────────── */
@@ -492,12 +506,12 @@ const {
   }
 
   #aegis__search .pagefind-ui__search-input {
-    color: var(--search-text);
+    color: var(--search-text, #161616);
     font-weight: 400;
   }
 
   #aegis__search input:focus {
-    --pagefind-ui-border: var(--search-accent);
+    --pagefind-ui-border: var(--search-accent, #0062a5);
   }
 
   #aegis__search .pagefind-ui__search-clear {
@@ -511,7 +525,7 @@ const {
 
   /* Each result is a card with border */
   #aegis__search .pagefind-ui__result {
-    border: 1px solid var(--search-border);
+    border: 1px solid var(--search-border, #d4d4d4);
     border-radius: var(--sl-search-corners);
     padding: 0;
     overflow: hidden;
@@ -528,7 +542,7 @@ const {
   #aegis__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)) {
     position: relative;
     width: 100%;
-    background-color: var(--search-dialog-bg);
+    background-color: var(--search-dialog-bg, #ffffff);
     padding: var(--sl-search-result-pad-block) var(--sl-search-result-pad-inline-end)
       var(--sl-search-result-pad-block) var(--sl-search-result-pad-inline-start);
     border-radius: var(--sl-search-corners) var(--sl-search-corners) 0 0;
@@ -542,7 +556,7 @@ const {
     width: 1.875rem;
     height: 1.875rem;
     top: calc(var(--sl-search-result-pad-block) + 0.125em);
-    background-color: var(--search-text);
+    background-color: var(--search-text, #161616);
     -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M%205.326%2022.899%20A%202.225%202.18%200%200%201%203.101%2020.719%20V%203.281%20A%202.225%202.18%200%200%201%205.326%201.101%20h%208.899%20a%202.67%202.616%200%200%201%201.895%200.769%20l%203.991%203.911%20a%202.67%202.616%200%200%201%200.788%201.859%20V%2020.719%20a%202.225%202.18%200%200%201%20-2.225%202.18%20z%22%2F%3E%3Cpath%20d%3D%22M%2014.225%201.101%20V%206.551%20a%201.112%201.09%200%200%200%201.112%201.09%20h%205.562%22%2F%3E%3Cpath%20d%3D%22M%209.775%208.73%20H%207.551%22%2F%3E%3Cpath%20d%3D%22M%2016.449%2013.09%20H%207.551%22%2F%3E%3Cpath%20d%3D%22M%2016.449%2017.449%20H%207.551%22%2F%3E%3C%2Fsvg%3E") center / 70% no-repeat;
     mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M%205.326%2022.899%20A%202.225%202.18%200%200%201%203.101%2020.719%20V%203.281%20A%202.225%202.18%200%200%201%205.326%201.101%20h%208.899%20a%202.67%202.616%200%200%201%201.895%200.769%20l%203.991%203.911%20a%202.67%202.616%200%200%201%200.788%201.859%20V%2020.719%20a%202.225%202.18%200%200%201%20-2.225%202.18%20z%22%2F%3E%3Cpath%20d%3D%22M%2014.225%201.101%20V%206.551%20a%201.112%201.09%200%200%200%201.112%201.09%20h%205.562%22%2F%3E%3Cpath%20d%3D%22M%209.775%208.73%20H%207.551%22%2F%3E%3Cpath%20d%3D%22M%2016.449%2013.09%20H%207.551%22%2F%3E%3Cpath%20d%3D%22M%2016.449%2017.449%20H%207.551%22%2F%3E%3C%2Fsvg%3E") center / 70% no-repeat;
     opacity: 0.5;
@@ -554,7 +568,7 @@ const {
     position: relative;
     padding: var(--sl-search-result-nested-pad-block) var(--sl-search-result-pad-inline-end)
       var(--sl-search-result-nested-pad-block) var(--sl-search-result-pad-inline-start);
-    background-color: var(--search-dialog-bg);
+    background-color: var(--search-dialog-bg, #ffffff);
   }
 
   /* Tree diagram — ├ for non-last items, └ for last item.
@@ -589,14 +603,14 @@ const {
   #aegis__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
   #aegis__search .pagefind-ui__result-nested:hover,
   #aegis__search .pagefind-ui__result-nested:focus-within {
-    background-color: var(--search-shortcut-bg);
+    background-color: var(--search-shortcut-bg, #eeeeee);
     cursor: pointer;
   }
 
   /* ── Result link text ─────────────────────────────────────── */
 
   #aegis__search .pagefind-ui__result-link {
-    --pagefind-ui-text: var(--search-text);
+    --pagefind-ui-text: var(--search-text, #161616);
     font-weight: 600;
     display: block;
   }
@@ -625,7 +639,7 @@ const {
   /* ── Search highlights ────────────────────────────────────── */
 
   #aegis__search mark {
-    color: var(--search-text);
+    color: var(--search-text, #161616);
     background-color: transparent;
     font-weight: 600;
   }
@@ -639,15 +653,15 @@ const {
   /* ── Load more button ─────────────────────────────────────── */
 
   #aegis__search .pagefind-ui__button {
-    background-color: var(--search-shortcut-bg);
-    color: var(--search-text);
-    border: 1px solid var(--search-border);
+    background-color: var(--search-shortcut-bg, #eeeeee);
+    color: var(--search-text, #161616);
+    border: 1px solid var(--search-border, #d4d4d4);
     border-radius: var(--sl-search-corners);
   }
 
   #aegis__search .pagefind-ui__button:hover {
-    border-color: var(--search-accent);
-    color: var(--search-accent);
+    border-color: var(--search-accent, #0062a5);
+    color: var(--search-accent, #0062a5);
   }
 
   /* ── Recent searches panel ──────────────────────────────────── */
@@ -666,7 +680,7 @@ const {
   .recent-searches-title {
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--search-text);
+    color: var(--search-text, #161616);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     opacity: 0.6;
@@ -674,7 +688,7 @@ const {
 
   .recent-searches-clear {
     font-size: 0.75rem;
-    color: var(--search-accent);
+    color: var(--search-accent, #0062a5);
     background: none;
     border: none;
     cursor: pointer;
@@ -708,11 +722,11 @@ const {
     cursor: pointer;
     font-size: 0.875rem;
     font-family: inherit;
-    color: var(--search-text);
+    color: var(--search-text, #161616);
   }
 
   .recent-searches-term:hover {
-    background-color: var(--search-shortcut-bg);
+    background-color: var(--search-shortcut-bg, #eeeeee);
   }
 
   .recent-searches-remove {
@@ -725,7 +739,7 @@ const {
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
-    color: var(--search-text);
+    color: var(--search-text, #161616);
     opacity: 0.4;
     font-size: 1rem;
     line-height: 1;
@@ -734,6 +748,6 @@ const {
 
   .recent-searches-remove:hover {
     opacity: 1;
-    background-color: var(--search-shortcut-bg);
+    background-color: var(--search-shortcut-bg, #eeeeee);
   }
 </style>
