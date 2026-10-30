@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [October](/releases/26/10/)
 
+- [v26.10.29](/releases/26/10/#release--v261029) — Fixed automated release notes not passing correctly
 - [v26.10.28](/releases/26/10/#release--v261028) — Fixed monthly release workflow to correctly create versioned tags
 - [v26.10.27](/releases/26/10/#release--v261027) — Fixed search component design token fallbacks to prevent style breakage
 
