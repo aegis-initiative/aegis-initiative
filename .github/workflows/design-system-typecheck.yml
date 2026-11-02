@@ -1,0 +1,19 @@
+name: Design System Typecheck
+on:
+  push:
+    paths: ['packages/aegis-design-system/**']
+  pull_request:
+    paths: ['packages/aegis-design-system/**']
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/aegis-design-system
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npm run typecheck
