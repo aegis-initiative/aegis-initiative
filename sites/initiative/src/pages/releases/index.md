@@ -11,6 +11,11 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 ## 2026
 
 
+### [November](/releases/26/11/)
+
+- [v26.11.2](/releases/26/11/#release--v26112) — Automated build and type-checking validation for improved release reliability
+
+
 ### [October](/releases/26/10/)
 
 - [v26.10.29](/releases/26/10/#release--v261029) — Fixed automated release notes not passing correctly
