@@ -1,0 +1,12 @@
+# Cloudflare Pages redirects
+# Format: <from>  <to>  <status>
+#
+# Legacy and malformed paths reported as 404 by Google Search Console.
+# Brand pages moved: media kit under /press/, design system under /ecosystem/.
+/brand                  /press/media-kit/            301
+/brand/                 /press/media-kit/            301
+/brand/design-system    /ecosystem/design-system/    301
+/brand/design-system/   /ecosystem/design-system/    301
+# An external link to /legal/ picked up a trailing backtick (/legal/%60).
+/legal/%60              /legal/                      301
+/legal/`                /legal/                      301
