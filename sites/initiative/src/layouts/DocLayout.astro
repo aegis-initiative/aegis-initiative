@@ -16,6 +16,26 @@ const {
   description = "The public home of the AEGIS Initiative — policy engagement, published analysis, and press presence",
 } = Astro.props;
 
+// Search-snippet description. When a page description is short, append the
+// context of the site section it belongs to, in the meta/OG/Twitter tags only.
+// The page's own description is reproduced verbatim.
+const SECTION_CONTEXT: Record<string, string> = {
+  about: "Learn about the AEGIS Initiative, the open initiative for governance-first security in autonomous AI systems.",
+  ecosystem: "Part of the AEGIS ecosystem of open specifications, tools, and documentation for governing AI agents.",
+  research: "From AEGIS Initiative research and policy work on governance-first security for autonomous AI systems.",
+  press: "From the AEGIS Initiative press room for governance-first security in autonomous AI systems.",
+  legal: "Applies to aegis-initiative.com and the other AEGIS Initiative public websites.",
+  contact: "The AEGIS Initiative works on governance-first security for autonomous AI systems.",
+  releases: "From the release history of aegis-initiative.com, the public home of the AEGIS Initiative.",
+};
+const SITE_CONTEXT = "From the AEGIS Initiative, establishing governance-first security for autonomous AI systems.";
+const SHORT_DESCRIPTION = 120;
+const firstSegment = Astro.url.pathname.split("/").filter(Boolean)[0] ?? "";
+const metaDescription =
+  description.length < SHORT_DESCRIPTION
+    ? `${description.replace(/[.\s]+$/, "")}. ${SECTION_CONTEXT[firstSegment] ?? SITE_CONTEXT}`
+    : description;
+
 // Auto-generate breadcrumbs from URL path
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 const segments = pathname.split('/').filter(Boolean);
@@ -78,12 +98,12 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} | AEGIS Initiative</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={`${title} | AEGIS Initiative`} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).toString()} />
     <meta property="og:site_name" content="AEGIS Initiative" />
     <meta property="og:image" content="https://aegis-initiative.com/OG_image.png" />
@@ -93,7 +113,7 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | AEGIS Initiative`} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content="https://aegis-initiative.com/OG_image.png" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

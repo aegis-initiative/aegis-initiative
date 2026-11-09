@@ -42,7 +42,7 @@ if not os.path.exists(file_path):
     content = f"""---
 layout: ../../../../layouts/ReleaseLayout.astro
 title: "{month_name} {day_int}, 20{year}"
-description: "Development log for {month_name} {day_int}, 20{year}"
+description: "Development log for {month_name} {day_int}, 20{year}: commits and changes merged into aegis-initiative.com, the public home of the AEGIS Initiative."
 ---
 
 ## Development Log

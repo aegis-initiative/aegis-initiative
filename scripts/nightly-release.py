@@ -390,7 +390,7 @@ def update_monthly(year, month, tag, builds_str, release_entries, day):
         content = f"""---
 layout: ../../../layouts/ReleaseLayout.astro
 title: "{month_name} {year_full}"
-description: "Release notes for {month_name} {year_full}"
+description: "Release notes for {month_name} {year_full}: versioned builds and changes to aegis-initiative.com, the public home of the AEGIS Initiative."
 ---
 
 {new_section}"""
