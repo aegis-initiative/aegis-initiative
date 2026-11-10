@@ -13,6 +13,7 @@ Release notes start in April 2026 with the introduction of the auto-release pipe
 
 ### [November](/releases/26/11/)
 
+- [v26.11.9](/releases/26/11/#release--v26119) — Improved meta descriptions and fixed broken redirects and links
 - [v26.11.2](/releases/26/11/#release--v26112) — Automated build and type-checking validation for improved release reliability
 
 
